@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Treinamento OpenLayers</title>
+   </head>
+   <body onload="init()">
+   
+      <!-- elemento div do mapa. é necessário definir um id para o elemento -->
+      <div id="map" style="height: 80vH;width:90vW"></div>
+      
+      <!-- Script do BHMap -->
+      <script type="text/javascript" src="https://bhmap.pbh.gov.br/v2/api/visualizador/js?funcionalidade=util&layersbase=base&versao=0.0.3"></script>
+      
+      <!-- Iniciar o mapa após o onload -->
+      <script type="text/javascript">
+         function init() {
+           // o parâmetro da função é o id do elemento div do mapa 
+           BHMap.startMap('map')
+         }
+      </script>
+   </body>
+</html>

@@ -2,12 +2,27 @@
 
 :root {
     --cor1: #02735E;
+    --cor2: #02835E;
+    --cor3: #02935E;
+    --cor4: #03035E;
+    --cor5: #03135E;
     
     --fonte-padrão: arial;
     --fonte-destaque: arial;
 }
 
-main{
-    background-color: var(--cor1);
+*{
+    margin: 0px;
+    padding: 0px;
 }
 
+header{
+    background-color: var(--cor1);
+    min-height: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    background-color: aqua;
+}
