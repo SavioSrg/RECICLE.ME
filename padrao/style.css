@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #02735E;
+    
+    --fonte-padrão: arial;
+    --fonte-destaque: arial;
+}
+
+main{
+    background-color: var(--cor1);
+}
+
