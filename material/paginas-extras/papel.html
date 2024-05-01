@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container-iframe{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        
+        #coluna1{
+            width: 40%;
+            padding: 20px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #coluna2{
+            width: 60%;
+            padding: 20px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+
+        .container-coletor{
+            background-color: bisque;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .bloco-1{
+            background-color: brown;
+            width: 70px;
+            height: 100px;
+        }
+        .bloco-2{
+            background-color: rgb(42, 165, 108);
+            width: 70px;
+            height: 100px;
+        }
+        .bloco-3{
+            background-color: rgb(144, 42, 165);
+            width: 70px;
+            height: 100px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main id="container-iframe">
+        <div id="coluna1">
+            <h1>Plástico</h1>
+            <p>Os plásticos são uma das matérias-primas mais utilizadas no planeta, esses são alguns exemplos: Embalagem descartável; sacos de lixo; garrafas pet; lixeiras;  componentes de geladeiras, embalagens de alimentos e embalagens de remédios.</p>
+        </div>
+        <div id="coluna2">
+            <h2>Agendar coleta do material:</h2>
+            <div class="container-coletor">
+                <div class="bloco-1"></div>
+                <div class="bloco-2"></div>
+                <div class="bloco-3"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
