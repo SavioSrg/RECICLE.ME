@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-materiais.css">
+    <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <title>Início</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        #tela{
+        }
+
+        .icones{
+            background-color: aqua;
+            text-align: center;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+        }
+
+        .container-test{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav  class="cabecalho-menu">
+            <a class="inicio">Início</a>
+            <a class="como-descartar">Como <br />Descartar</a>
+            <a class="login" >Login</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <div class="container-test">
+                <div class="icones">
+                    <a href="../paginas-extras/plastico.html" target="frame">Plástico</a>
+                </div>
+                <div class="icones">
+                    <a href="../paginas-extras/vidro.html" target="frame">Vidro</a>
+                </div>
+            </div>
+            <iframe id="tela" name="frame" width= "100%" height="600px"></iframe>
+        </section>
+
+    </main>
+    
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img"  src="/logos/logosvg.svg" alt="LogoRecicleME">
+    </footer>
+</body>
+</html>
