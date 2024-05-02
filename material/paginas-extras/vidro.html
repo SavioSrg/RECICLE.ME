@@ -24,12 +24,19 @@
             box-sizing: border-box;
         }
 
-
         .container-coletor{
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         } 
+
+        .bloco-1, .bloco-2, .bloco-3{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
 
         .bloco-1{
             background-color: rgb(70, 37, 65);
@@ -52,14 +59,26 @@
     <main id="container-iframe">
         <div id="coluna1">
             <h1>Vidro</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti suscipit accusantium vel iusto animi esse, ipsam mollitia alias ex aliquid odio at? Recusandae facilis praesentium deserunt magni officiis, earum veniam!</p>
+            <p>O vidro reciclado é uma matéria-prima versátil e eco-friendly, proveniente do processo de reciclagem de vidro pós-consumo. Este material sustentável é obtido através da trituração e fusão de resíduos de vidro, resultando em novos produtos com um menor impacto ambiental. Desde garrafas e frascos até vidros planos, o vidro reciclado é utilizado na fabricação de uma variedade de itens, incluindo embalagens, isolamento térmico, revestimentos e até mesmo arte e decoração. Além de reduzir a quantidade de resíduos enviados para aterros sanitários, o uso de vidro reciclado também economiza energia e recursos naturais, tornando-o uma escolha sustentável e consciente para empresas e consumidores preocupados com o meio ambiente.</p>
         </div>
         <div id="coluna2">
             <h2>Agendar coleta do material:</h2>
             <div class="container-coletor">
-                <div class="bloco-1"></div>
-                <div class="bloco-2"></div>
-                <div class="bloco-3"></div>
+                <div class="bloco-1">
+                    <p>Nome da empresa</p>
+                    <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
+                    <button class="button-agenda">Mais informações</button>
+                </div>
+                <div class="bloco-2">
+                    <p>Nome da empresa</p>
+                    <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
+                    <button class="button-agenda">Mais informações</button>
+                </div>
+                <div class="bloco-3">
+                    <p>Nome da empresa</p>
+                    <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
+                    <button class="button-agenda">Mais informações</button>
+                </div>
             </div>
         </div>
     </main>
