@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-               #container-iframe{
+        #container-iframe {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             gap: 10px;
         }
-        
-        #coluna1{
+
+        #coluna1 {
             width: 40%;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        #coluna2{
+        #coluna2 {
             width: 60%;
             padding: 20px;
             box-sizing: border-box;
         }
 
 
-        .container-coletor{
+        .container-coletor {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        } 
+        }
 
-        .bloco-1, .bloco-2, .bloco-3{
+        .bloco {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             text-align: center;
+            height: 250px;
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .bloco-1{
-            background-color: rgb(67, 165, 42);
-            width: 200px;
-            height: 270px;
+        .button-agenda {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
-        .bloco-2{
-            background-color: rgb(76, 42, 169);
-            width: 200px;
-            height: 270px;
-        }
-        .bloco-3{
-            background-color: rgb(40, 200, 0);
-            width: 200px;
-            height: 270px;
+
+        .button-agenda:hover {
+            background-color: #3e8e41;
         }
     </style>
 </head>
+
 <body>
     <main id="container-iframe">
-        <div id="coluna1">
+        <section id="coluna1">
             <h1>Papel</h1>
-            <p>Os plásticos são uma das matérias-primas mais utilizadas no planeta, esses são alguns exemplos: Embalagem descartável; sacos de lixo; garrafas pet; lixeiras;  componentes de geladeiras, embalagens de alimentos e embalagens de remédios.</p>
-        </div>
-        <div id="coluna2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam nisi expedita distinctio dignissimos qui dolores fugit, molestias explicabo voluptate quod excepturi deleniti architecto dolorem dolorum aut tempora autem ducimus.</p>
+            <div class="figura"> 
+
+            </div>
+            
+        </section>
+        <section id="coluna2">
             <h2>Agendar coleta do material:</h2>
             <div class="container-coletor">
-                <div class="bloco-1">
+                <div class="bloco">
                     <p>Nome da empresa</p>
                     <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
                     <button class="button-agenda">Mais informações</button>
                 </div>
-                <div class="bloco-2">
+                <div class="bloco">
                     <p>Nome da empresa</p>
                     <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
                     <button class="button-agenda">Mais informações</button>
                 </div>
-                <div class="bloco-3">
+                <div class="bloco">
                     <p>Nome da empresa</p>
                     <p>Estamos localizados no Centro, recolhemos plástico e papel.</p>
                     <button class="button-agenda">Mais informações</button>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>

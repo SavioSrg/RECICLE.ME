@@ -26,11 +26,10 @@
             font-size: 20px;
             text-align: center;
         }
-        nav.container-icones{
+        nav.container-card{
             display: flex;
             width: 100%;
             min-height: 370px;
-            padding: 10px;
             align-items: center;
             font-size: var(--fonte-destaque);
             justify-content: space-around;
@@ -41,27 +40,31 @@
             font-weight: bold;
         }
 
-        div.botao{
-            background-color: rgb(242, 243, 243);
-            width: 130px;
-            height: 160px;
-            text-align: center;
-            box-shadow: 0px 5px 7px hsla(0, 0%, 0%, 0.301);
-            border-radius: 7px;
+        a.card{
+            width: 150px;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            text-decoration: none;
             transition-duration: .5s;
-            font-size: 20px;
         }
 
-        div.botao > img{
-            width: 80%;
-            height: 80%;
-        }
-
-        div.botao:hover{
+        a.card:hover{
             box-shadow: 0px 5px 7px hsla(0, 0%, 0%, 0.301);
+            width: 175px;
+        }
+
+        .card-image{
+            width: 100%;
+            height: 150px; /* adjust the height as needed */
+            object-fit: cover;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .card-text{
+            text-align: center;
             font-size: 22px;
-            width: 160px;
-            height: 190px;
+            color: rgb(43, 42, 46);
         }
 
         .hidden {
@@ -85,27 +88,31 @@
     <main>
         <p>Clique no nome do material que deseja descartar</p>
         <section>
-            <nav id="icones" class="container-icones">
-                <div class="botao">
-                    <a href="./paginas-extras/plastico.html" target="frame" id="button1">Plástico</a>
-                    <img src="../imgs/plastico.jpg" alt="imagem de plastico">
-                </div>
-                <div class="botao">
-                    <a href="./paginas-extras/vidro.html" target="frame" id="button2">Vidro</a>
-                    <img src="../imgs/vidro.jpg" alt="imagem de vidro">
-                </div>
-                <div class="botao">
-                    <a href="./paginas-extras/papel.html" target="frame" id="button3" class="botao">Papel</a>
-                    <img src="../imgs/papel.jpg" alt="imagem de papel">
-                </div>
-                <div class="botao">
-                    <a href="./paginas-extras/metal.html" target="frame" id="button4" class="botao">Metal</a>
-                    <img src="../imgs/metal.jpg" alt="imagem de metal">
-                </div>
-                <div class="botao">
-                    <a href="./paginas-extras/organico.html" target="frame" id="button5" class="botao">Orgânico</a>
-                    <img src="../imgs/organico.jpg" alt="imagem do organico">
-                </div>
+            <nav id="icones" class="container-card">
+                <a href="./paginas-extras/plastico.html" target="frame" id="button1" class="card">
+                    <h2 class="card-text">Plástico</h2>
+                    <img src="../imgs/plastico.jpg" alt="imagem de plastico" class="card-image">
+                </a>
+
+                <a href="./paginas-extras/vidro.html" target="frame" id="button2" class="card">
+                    <h2 class="card-text">Vidro</h2>
+                    <img src="../imgs/vidro1.jpg" alt="imagem de vidro" class="card-image">
+                </a>
+
+                <a href="./paginas-extras/papel.html" target="frame" id="button3" class="card">
+                    <h2 class="card-text">Papel</h2>
+                    <img src="../imgs/papel.jpg" alt="imagem de papel" class="card-image">
+                </a>
+                
+                <a href="./paginas-extras/metal.html" target="frame" id="button4" class="card">
+                    <h2 class="card-text">Metal</h2>
+                    <img src="../imgs/metal.jpg" alt="imagem de metal" class="card-image">
+                </a>
+                
+                <a href="./paginas-extras/organico.html" target="frame" id="button5" class="card">
+                    <h2 class="card-text">Orgânico</h2>
+                    <img src="../imgs/organico1.jpg" alt="imagem do organico" class="card-image">
+                </a>
             </nav>
             <iframe id="myDiv" class="hidden" name="frame" width= "100%" height="400px" ></iframe>
         </section>
