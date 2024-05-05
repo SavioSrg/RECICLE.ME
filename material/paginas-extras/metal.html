@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Metal</title>
     <style>
         #container-iframe {
             display: flex;
@@ -57,6 +57,19 @@
         .button-agenda:hover {
             background-color: #3e8e41;
         }
+
+        @media (max-width: 900px) {
+            #container-iframe {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 10px;
+            }
+
+            #coluna1 {
+            width: 100%;
+        }
+        }
     </style>
 </head>
 
@@ -64,11 +77,13 @@
     <main id="container-iframe">
         <section id="coluna1">
             <h1>Metal</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam nisi expedita distinctio dignissimos qui dolores fugit, molestias explicabo voluptate quod excepturi deleniti architecto dolorem dolorum aut tempora autem ducimus.</p>
-            <div class="figura"> 
+            <p>
+                O descarte de materiais de metal envolve separar diferentes tipos de metais, como alumínio, ferro, cobre, entre outros, para reciclagem. É importante garantir a separação adequada e seguir as regulamentações locais para evitar impactos ambientais negativos. Reciclar metais ajuda a preservar recursos naturais e reduzir a poluição.
+            </p>
+            <div class="figura">
 
             </div>
-            
+
         </section>
         <section id="coluna2">
             <h2>Agendar coleta do material:</h2>
@@ -92,4 +107,5 @@
         </section>
     </main>
 </body>
+
 </html>
