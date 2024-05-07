@@ -101,7 +101,7 @@ section{
     padding: 0 2rem;
 }
 
-input {
+input, select{
     background: rgb(109, 143, 100, .56);
     color: #D9D9D9;
     border: none;
@@ -113,6 +113,26 @@ input {
 
 input::placeholder {
     color: #D9D9D9;
+}
+
+button#cadastrar-servico {
+    background-color: #414B3B;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem 1rem;
+    
+}
+
+.cadastrar-servico, .endereco {
+    text-align: center;
+}
+
+input#rua {
+    width: 70%;
+}
+
+input#numero {
+    width: 28%;
 }
 
 div#formulario+div {
