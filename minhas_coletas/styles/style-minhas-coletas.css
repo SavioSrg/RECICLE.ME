@@ -1,0 +1,33 @@
+/*Título da página */
+
+.conteudo-perfil {
+    display: flex;
+}
+
+#perfil {
+    width: 30%;
+    display: flex;
+}
+
+#icone-perfil {
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 0.6rem;
+}
+
+/*Conteúdo */
+section{
+    margin: 2rem 4rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2rem;
+}
+
+.rodape {
+    z-index: 5;
+}

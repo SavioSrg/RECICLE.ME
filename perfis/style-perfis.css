@@ -78,6 +78,8 @@ section{
 #perfil {
     width: 30%;
     display: flex;
+    font-size: large;
+    font-family: "Playfair Display", serif;
 }
 
 #icone-perfil {
@@ -241,4 +243,10 @@ button#excluir {
     background-color: rgba(0, 0, 0, .5);
     backdrop-filter: blur(3px);
     z-index: 1;
+}
+
+/* Tela "Minhas coletas" do coletor */
+
+#cards {
+    font-family: var(--fonte-padrão);
 }
