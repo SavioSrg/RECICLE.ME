@@ -84,7 +84,7 @@ class CardColetas extends HTMLElement {
         divReciclagem.setAttribute("class", "img-reciclagem");
 
         const imgReciclagem = document.createElement("img");
-        imgReciclagem.src = "/imgs/simbolo-reciclagem.png"
+        imgReciclagem.src = "../imgs/simbolo-reciclagem.png"
         imgReciclagem.alt = "Símbolo mundial da reciclagem, que é composto por três setas que formam um triângulo, no sentido horário."
 
         const divCategoria = document.createElement("div");
