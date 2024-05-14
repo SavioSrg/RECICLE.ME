@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/padrao/style.css"> -->
+    <link rel="stylesheet" href="../perfis/style-perfis.css">
+    <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <title>Perfil</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+
+</head>
+<body> 
+    <header class="cabecalho">
+        <nav  class="cabecalho-menu">
+            <a class="inicio">Início</a>
+            <a class="como-descartar">Como <br />Descartar</a>
+            <a class="como-descartar">Minhas Coletas</a>
+            <a class="como-descartar">Meus Serviços</a>
+            <a class="como-descartar" style="color: #414B3B;">Perfil</a>
+            <a class="login">Sair</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section>
+            <div class="conteudo-perfil">
+                <div id="perfil">
+                    <h1>Perfil</h1>
+                    <div id="icone-perfil">
+                        <img src="../imgs/user.png" alt="">
+                    </div>
+                    
+                </div>
+                <div id="card-infos">
+                    <div id="formulario">
+                        <input type="text" name="Nome" id="nome" placeholder="Nome da empresa">
+                        <input type="number" name="CNPJ" id="cnpj" placeholder="CNPJ">
+                        <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                        <div class="endereco">
+                            <input type="text" name="rua" id="rua" placeholder="Logradouro">
+                            <input type="number" name="numero" id="numero" placeholder="Número">
+                            <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
+                            <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
+                            <select name="estado" id="estado" placeholder="Estado">
+                                <option value="Estado">Estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+
+
+                        
+                    </div>
+                    <div>
+                        <button type="button" id="alterar-senha">Alterar senha</button>
+                    </div>
+                    <div class="cadastrar-servico">
+                        <button type="button" id="cadastrar-servico">Cadastrar Serviço</button>
+                    </div>
+                    <div id="botoes-formulario">
+                        <button type="button" id="editar">Editar</button>
+                        <button type="button" id="excluir" onclick="abreConfirmacao()">Excluir</button>
+                    </div>
+                </div>
+                <div id="card-confirmacao">
+                    <div></div>
+                    <div id="confirmacao" class="hidden">
+                        <p>Confirma a exclusão da conta? Todos os dados serão perdidos.</p>
+                        <div>
+                            <button type="button" id="editar" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
+                            <button type="button" id="excluir">Excluir</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img"  src="../logos/logosvg.svg" alt="LogoRecicleME">
+    </footer>
+
+    <div id="fundo-modal" class="hidden" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()"></div>
+
+    <script src="../perfis/usuario.js"></script>
+</body>
+</html>
