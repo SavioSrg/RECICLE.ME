@@ -121,6 +121,7 @@ a.card:hover {
 .card-text {
     text-align: center;
     font-size: 22px;
+    padding: 3px;
     color: rgb(43, 42, 46);
 }
 
@@ -154,7 +155,7 @@ a.card:hover {
 
 iframe {
     width: 99%;
-    height: 920px;
+    height: 1200px;
     margin: auto;
     border: none;
 }
@@ -175,7 +176,7 @@ iframe {
 
     iframe {
         width: 95vw;
-        height: 1300px;
+        height: 1500px;
     }
 }
 

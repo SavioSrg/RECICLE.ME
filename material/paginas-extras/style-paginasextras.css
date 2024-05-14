@@ -13,7 +13,7 @@
     --cor6: #CE925A;
 
     --fonte-destaque: "Playfair Display", serif;
-    --fonte-padrão: arial"Inter", sans-serif;
+    --fonte-padrao: arial"Inter", sans-serif;
 }
 
 *{
@@ -86,10 +86,17 @@ p.text-comum{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 300px;
     max-width: 350px;
+    font-size: 16px;
+}
+
+.bloco > h3{
+    font-family: var(--fonte-destaque);
+    font-size: 22px;
 }
 
 .bl-conteudo > h3, p {
     padding: 7px;
+
 }
 
 .inform-coletor{
