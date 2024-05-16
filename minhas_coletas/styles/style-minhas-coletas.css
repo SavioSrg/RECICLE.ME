@@ -1,5 +1,9 @@
 /*Título da página */
 
+body {
+    background-color: #fafafa;
+}
+
 .conteudo-perfil {
     display: flex;
 }
@@ -19,7 +23,7 @@
 
 /*Conteúdo */
 section{
-    margin: 2rem 4rem;
+    margin: 0 2rem 4rem;
 }
 
 #cards {
@@ -30,4 +34,33 @@ section{
 
 .rodape {
     z-index: 5;
+}
+
+@media screen and (max-width: 1347px){
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        width: 210px;
+        max-height: 355px;
+        background-color: #62996B;
+        border-radius: 15px;
+        text-align: center;
+        padding: 1rem 0 0 0;
+        margin: 0 auto 3rem;
+    }
+    .tempo {
+        font-size: small;
+    }
+    span#categoria {
+        font-size: small;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        font-size: small;
+        color: #D9D9D9;
+    }
+    
 }

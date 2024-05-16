@@ -117,7 +117,8 @@ class CardColetas extends HTMLElement {
         .card-info {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 210px;
+            height: 527px;
             background-color: #62996B;
             border-radius: 15px;
             text-align: center;
@@ -183,6 +184,8 @@ class CardColetas extends HTMLElement {
         .img-reciclagem img {
             padding: 4.15rem;
         }
+
+        @media
         `
 
         return style;
