@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nova-conta-coletor.css">
+    <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <title>Início</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    /*body {background-image: url('logos/3folhas-transparente.png'), url('logos/Vector.png') ;}*/
+
+    </style>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav 5 class="cabecalho-menu">
+            <a class="inicio">Início</a>
+            <a class="como-descartar">Como <br />Descartar</a>
+            <a class="login" >Login</a>
+        </nav>
+
+    </header>
+
+    <!-- Logo das Folhas -->
+    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\3folhas-transparente.png" alt="logo-folhas" class="logo-folhas1">
+    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\3folhas-transparente.png" alt="logo-folhas" class="logo-folhas2">
+    <!-- Logo dos Detalhes das Folhas-->
+    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\Vector.png" alt="logo-folhas" class="logo-detalhes1">
+    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\Vector.png" alt="logo-folhas" class="logo-detalhes2">
+
+    <main>
+
+        <p class="txt-nova-conta">Nova <br> Conta</p>
+
+        <div class="container">
+            <div class="opcoes">
+                <div class="opcao-item">
+                  <input type="radio" id="descartar" name="opcao" value="descartar">
+                  <label for="descartar">Quero descartar meu lixo</label>
+                </div>
+                <div class="opcao-item">
+                  <input type="radio" id="divulgar" name="opcao" value="divulgar">
+                  <label for="divulgar">Quero divulgar meu serviço</label>
+                </div>
+              </div>
+              
+            <div class="inputs">
+                <input type="text" id="nome" name="nome" placeholder="Nome da empresa">
+                <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ">
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro">
+                <input type="text" id="numero" name="numero" placeholder="Numero">
+                <input type="text" id="bairro" name="bairro" placeholder="Bairro">
+                <input type="text" id="cidade" name="cidade" placeholder="Cidade">
+                <input type="text" id="estado" name="estado" placeholder="Estado">
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha">
+            </div>
+            <div class="botoes">
+                <button type="submit">Salvar</button>
+                <button type="button">Cancelar</button>
+            </div>
+        </div>
+        
+    
+
+    </main>
+    
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img"  src="C:\Users\beatr\Desktop\RECICLE.ME\logos\logo-200px.png" alt="LogoRecicleME">
+    </footer>
+
+    <!-- JS PARA OS BUTTON RADIOS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const opcaoDescartar = document.getElementById('descartar');
+          const opcaoDivulgar = document.getElementById('divulgar');
+        
+          opcaoDescartar.addEventListener('change', function() {
+            if (opcaoDescartar.checked) {
+              window.location.href = 'nova-conta-cliente.html'; 
+            }
+          });
+        
+          opcaoDivulgar.addEventListener('change', function() {
+            if (opcaoDivulgar.checked) {
+              window.location.href = 'nova-conta-coletor.html'; 
+            }
+          });
+        });
+
+        // Verifica se há um estado salvo para os botões de rádio
+if(localStorage.getItem('opcaoSelecionada')) {
+    
+    const opcaoSelecionada = localStorage.getItem('opcaoSelecionada');
+
+    
+    document.getElementById(opcaoSelecionada).checked = true;
+}
+
+
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        
+        localStorage.setItem('opcaoSelecionada', this.id);
+    });
+});
+
+        </script>
+        <!-- JS PARA OS BUTTON RADIOS -->
+        
+</body>
+</html>

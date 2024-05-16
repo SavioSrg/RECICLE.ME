@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #6D8F64;
+    --cor2: #02835E;
+    --cor3: #02935E;
+    --cor4: #03035E;
+    --cor5: #03135E;
+    
+    --fonte-padrão: arial;
+    --fonte-destaque: arial;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* barra de menu */
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+
+
+}
+
+.cabecalho-menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+    align-items: center;
+    height: 40px;
+    width: 720px;
+    background-color: var(--cor1);
+    border-radius: 15px;
+}
+
+.inicio{
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    padding-left: 5px;
+}
+
+.como-descartar{
+    text-align: center;
+     font-size: 14px;
+     color: #FFFFFF;
+     font-weight: 600;
+     font-family: "Playfair Display", serif;
+
+}
+
+.login{
+    padding-left: 480px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    padding-right: 5px;
+}
+
+
+/*conteudo */
+
+.conteudo{
+    min-height: calc(100vh - 40px);
+    overflow: auto;
+}
+
+/*container principal*/
+.container {
+    width: 470px;
+    height: 492px;
+    display: flex; 
+    margin: 2% 35% auto; 
+    flex-direction: column;
+    box-sizing: border-box;
+    border: none;
+    padding: 15px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(192, 192, 192, 0.3);
+}
+
+.opcoes {
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
+    margin-right: 40%;
+    color: #626262;
+}
+
+.opcoes label {
+    margin-right: 10px;
+    display: flex; 
+    margin-top: 10px;
+}
+
+.opcoes input[type="radio"] {
+    display: none; /* Oculta o botão de rádio padrão */
+}
+  
+/* Estilizando a aparência do botão de rádio*/
+.opcoes input[type="radio"] + label:before {
+    content: ''; 
+    display: inline-block; 
+    width: 26px; 
+    height: 17px; 
+    border-radius: 10px;
+    border: 2px solid #999;
+    margin-right: 10px; 
+}
+  
+/* Estilizando a aparência do botão de rádio quando selecionado */
+.opcoes input[type="radio"]:checked + label:before {
+    background-color: #414B3B; 
+    border-color: #414B3B; 
+}
+
+.inputs input {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(109, 143, 100, 0.4);
+}
+
+.inputs input::placeholder {
+    color: #FFFFFF; 
+}
+
+
+#nome {
+    width: 330px;
+    height: 31px; 
+}
+
+#cnpj {
+    width: 330px;
+    height: 31px;   
+}
+
+#email {
+    width: 330px;
+    height: 31px; 
+}
+
+#logradouro {
+    width: 192px;
+    height: 31px; 
+}
+
+#numero {
+    width: 97px;
+    height: 31px; 
+    margin-left: 232px;
+    margin-top: -46px;
+}
+
+#bairro {
+    width: 155px;
+    height: 31px; 
+}
+
+#cidade {
+    width: 155px;
+    height: 31px; 
+    margin-left: 174px;
+    margin-top: -46px;
+}
+
+#estado {
+    width: 155px;
+    height: 31px; 
+    margin-left: 90px;
+}
+
+#senha {
+    width: 155px;
+    height: 31px;
+}
+
+#confirmar-senha {
+    width: 155px;
+    height: 31px;
+}
+
+
+.botoes button {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* Estilizando o botão de tipo 'submit' */
+.botoes button[type="submit"] {
+    width: 54px;
+    height: 26px;
+    background-color: #52724A; 
+    border: none; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    /* display: inline-block;  */
+    font-size: 14px; 
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-left: 185px;
+    margin-top: -20px; /* Adicionando margem superior para mover os botões para baixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilizando o botão de tipo 'button' */
+  .botoes button[type="button"] {
+    width: 65px;
+    height: 26px;
+    background-color: #983939; 
+    border: none; 
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    /* display: inline-block;  */
+    font-size: 14px; 
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-left: 250px;
+    margin-top: -30px; /* Adicionando margem superior para mover os botões para baixo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.txt-nova-conta{
+    position: fixed;
+    top: 10%; 
+    left: 19%; 
+    padding: 20px;
+    color: #414B3B; 
+    font-size: 34px;
+    font-weight: bold;
+}
+
+
+.logo-folhas1 {
+    width: 176px;
+    height: auto;
+    top: 25%;
+    right: 68%;
+    position:absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.logo-detalhes1 {
+    width: 139px;
+    height: auto;
+    top: 32%;
+    right: 66%;
+    position:absolute;
+    z-index: -1;
+}
+
+.logo-folhas2 {
+    width: 176px;
+    height: auto;
+    top: 55%;
+    right: 62%;
+    transform: rotate(-45deg);
+    position:absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.logo-detalhes2 {
+    width: 139px;
+    height: auto;
+    top: 65%;
+    right: 65%;
+    position:absolute;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+/*rodape */
+.rodape{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; 
+}
+
+.rodape-texto{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+
+.rodape-img{
+    display: flex;
+    align-self:center;
+    position:absolute;
+    padding-bottom: 5.7%;
+    width: 40px;
+    height: 35px;
+}
