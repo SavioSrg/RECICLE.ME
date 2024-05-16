@@ -74,6 +74,10 @@ section{
     margin: 2rem 15rem;
 }
 
+section#coletor{
+    margin: 0 5rem 6rem;
+}
+
 .conteudo-perfil {
     display: flex;
 }
@@ -94,11 +98,14 @@ section{
 }
 
 .descricao-perfil {
-    padding: 2rem 5rem 0 0;
+    padding: 0.8rem;
+    margin: 2rem 5rem 0 0;
+    background-color: #e6e2e2;
+    border-radius: 10px;
 }
 
 #card-infos {
-    padding: 2rem;
+    padding: 1.7rem 2rem;
     margin: 0.5rem;
     background: #C0C0C0;
     border-radius: 10px;
@@ -108,7 +115,16 @@ section{
 #formulario {
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
+}
+
+fieldset {
+    padding: 1rem;
+    border: 1px solid rgb(168, 166, 166);
+}
+
+fieldset#infos-pessoais {
+    margin-bottom: 1rem;
 }
 
 input, select{
@@ -118,7 +134,8 @@ input, select{
     height: 30px;
     margin: 0.5rem 0;
     text-align: left;
-    padding-inline: 0.6rem;
+    /* padding-inline: 0.6rem; */
+    width: 100%;
 }
 
 input::placeholder {
@@ -130,15 +147,14 @@ button#cadastrar-servico {
     background-color: #414B3B;
     border-radius: 10px;
     border: none;
-    padding: 0.5rem 1rem;
-    
+    padding: 0.5rem 1rem; 
 }
 
 .cadastrar-servico, .endereco {
     text-align: center;
 }
 
-input#rua {
+input#bairro {
     width: 70%;
 }
 
@@ -203,6 +219,7 @@ button#excluir {
     position: relative;
     top: 70%;
     z-index: 2;
+    font-weight: 700;
 }
 
 #confirmacao > div {

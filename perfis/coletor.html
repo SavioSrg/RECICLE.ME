@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,14 @@
     <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
     <title>Perfil</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
 
 </head>
-<body> 
+
+<body>
     <header class="cabecalho">
-        <nav  class="cabecalho-menu">
+        <nav class="cabecalho-menu">
             <a class="inicio">Início</a>
             <a class="como-descartar">Como <br />Descartar</a>
             <a class="como-descartar">Minhas Coletas</a>
@@ -26,59 +28,68 @@
     </header>
 
     <main>
-        <section>
+        <section id="coletor">
             <div class="conteudo-perfil">
-                <div id="perfil">
-                    <h1>Perfil</h1>
-                    <div id="icone-perfil">
-                        <img src="../imgs/user.png" alt="">
+                <div class="perfil-completo">
+                    <div id="perfil">
+                        <h1>Perfil</h1>
+                        <div id="icone-perfil">
+                            <img src="../imgs/user.png" alt="">
+                        </div>
                     </div>
-                    
+                    <div class="descricao-perfil">
+                        <span>Aqui você pode editar suas informações pessoais ou excluir a sua conta permanentemente.</span>
+                    </div>
                 </div>
                 <div id="card-infos">
                     <div id="formulario">
-                        <input type="text" name="Nome" id="nome" placeholder="Nome da empresa">
-                        <input type="number" name="CNPJ" id="cnpj" placeholder="CNPJ">
-                        <input type="email" name="E-mail" id="email" placeholder="E-mail">
-                        <div class="endereco">
-                            <input type="text" name="rua" id="rua" placeholder="Logradouro">
-                            <input type="number" name="numero" id="numero" placeholder="Número">
-                            <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
-                            <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
-                            <select name="estado" id="estado" placeholder="Estado">
-                                <option value="Estado">Estado</option>
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
-                        </div>
+                        <fieldset id="infos-pessoais">
+                            <legend>Informações pessoais</legend>
+                            <input type="text" name="Nome" id="nome" placeholder="Nome da empresa">
+                            <input type="number" name="CNPJ" id="cnpj" placeholder="CNPJ">
+                            <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <div class="endereco">
+                                <input type="text" name="rua" id="rua" placeholder="Logradouro">
+                                <input type="number" name="numero" id="numero" placeholder="Número">
+                                <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
+                                <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
+                                <select name="estado" id="estado" placeholder="Estado">
+                                    <option value="Estado">Estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </fieldset>
 
 
-                        
                     </div>
                     <div>
                         <button type="button" id="alterar-senha">Alterar senha</button>
@@ -96,24 +107,28 @@
                     <div id="confirmacao" class="hidden">
                         <p>Confirma a exclusão da conta? Todos os dados serão perdidos.</p>
                         <div>
-                            <button type="button" id="editar" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
+                            <button type="button" id="editar"
+                                onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
                             <button type="button" id="excluir">Excluir</button>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
     </main>
-    
+
     <footer class="rodape">
         <p class="rodape-texto">Recicle.me</p>
-        <img class="rodape-img"  src="../logos/logosvg.svg" alt="LogoRecicleME">
+        <img class="rodape-img" src="../logos/logosvg.svg" alt="LogoRecicleME">
     </footer>
 
-    <div id="fundo-modal" class="hidden" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()"></div>
+    <div id="fundo-modal" class="hidden"
+        onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">
+    </div>
 
     <script src="../perfis/usuario.js"></script>
 </body>
+
 </html>
