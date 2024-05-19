@@ -16,6 +16,11 @@
     padding: 0px;
 }
 
+body{
+    background-color: #FAFAFA;
+
+}
+
 /* barra de menu */
 .cabecalho{
     display: flex;
@@ -62,7 +67,6 @@
     padding-right: 5px;
 }
 
-
 /*conteudo */
 
 .conteudo{
@@ -97,6 +101,7 @@
     margin-right: 10px;
     display: flex; 
     margin-top: 10px;
+    font-size: 13px;
 }
 
 .opcoes input[type="radio"] {
@@ -107,8 +112,8 @@
 .opcoes input[type="radio"] + label:before {
     content: ''; 
     display: inline-block; 
-    width: 26px; 
-    height: 17px; 
+    width: 23px; 
+    height: 15px; 
     border-radius: 10px;
     border: 2px solid #999;
     margin-right: 10px; 
@@ -124,51 +129,58 @@
     display: block;
     margin-bottom: 18px;
     width: 100%;
-    padding: 15px;
+    padding: 6px;
     border: none;
     box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
     background-color: rgb(109, 143, 100, 0.4);
+    border: 1px solid;
+    border-color: rgb(109, 143, 100, 0.4);
 }
 
 .inputs input::placeholder {
     color: #FFFFFF; 
+    font-size: 13px;
 }
 
-
-#nome {
-    width: 330px;
-    height: 31px; 
+.input-container {
+    display:inline-flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 2px;
 }
 
-#cpf {
-    width: 330px;
-    height: 31px;   
+.input-container label {
+    width: 20%;
+    text-align: right;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
-#email {
-    width: 330px;
-    height: 31px; 
+.input-container span {
+    color: red;
+    margin-left: 5px;
 }
 
-#cidade {
-    width: 330px;
-    height: 31px; 
+.input-container input {
+    width: 80%;
 }
 
-#senha {
-    width: 200px;
-    height: 31px;
-    margin-left: 130px;
+.mensagem {
+    font-size: 13px;
+    display:flex;
+    margin-left: 50px;
+    margin-top: -13px;
 }
 
-#confirmar-senha {
-    width: 200px;
-    height: 31px;
-    margin-left: 130px;
+.asterisco {
+    color: red;
+    margin-left: 5px; 
+    display:flex;
+    margin-left: 40px;
 }
-
 
 .botoes button {
     margin-left: 40%;
@@ -205,12 +217,48 @@
     text-decoration: none; 
     display: inline-block; 
     font-size: 14px; 
-    margin: 4px 2px; 
+    margin: 20px -10px; 
     cursor: pointer;
     border-radius: 5px; 
     margin-left: 5px;
   }
   
+  /* Estilos do pop-up */
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popupContent {
+    background-color: #ffffff; /* Cor de fundo do pop-up */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Sombra */
+}
+
+/* Estilos para o botão Fechar */
+#btnFecharPopup {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #6D8F64; /* Cor do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnFecharPopup:hover {
+    background-color: rgb(109, 143, 100, 0.7);; /* Mudança de cor ao passar o mouse */
+}
+
 
 .txt-nova-conta{
     position: fixed;

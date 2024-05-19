@@ -7,20 +7,16 @@
     <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
     <title>Início</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-    /*body {background-image: url('logos/3folhas-transparente.png'), url('logos/Vector.png') ;}*/
-
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
-
 </head>
 <body>
     <header class="cabecalho">
-        <nav 5 class="cabecalho-menu">
+        <nav class="cabecalho-menu">
             <a class="inicio">Início</a>
             <a class="como-descartar">Como <br />Descartar</a>
-            <a class="login" >Login</a>
+            <a class="login">Login</a>
         </nav>
-
     </header>
 
     <!-- Logo das Folhas -->
@@ -31,86 +27,172 @@
     <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\Vector.png" alt="logo-folhas" class="logo-detalhes2">
 
     <main>
-
         <p class="txt-nova-conta">Nova <br> Conta</p>
-
         <div class="container">
             <div class="opcoes">
                 <div class="opcao-item">
-                  <input type="radio" id="descartar" name="opcao" value="descartar">
-                  <label for="descartar">Quero descartar meu lixo</label>
+                    <input type="radio" id="descartar" name="opcao" value="descartar">
+                    <label for="descartar">Quero descartar meu lixo</label>
                 </div>
                 <div class="opcao-item">
-                  <input type="radio" id="divulgar" name="opcao" value="divulgar">
-                  <label for="divulgar">Quero divulgar meu serviço</label>
+                    <input type="radio" id="divulgar" name="opcao" value="divulgar">
+                    <label for="divulgar">Quero divulgar meu serviço</label>
                 </div>
-              </div>
-              
-            <div class="inputs">
-                <input type="text" id="nome" name="nome" placeholder="Nome da empresa">
-                <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ">
-                <input type="email" id="email" name="email" placeholder="E-mail">
-                <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro">
-                <input type="text" id="numero" name="numero" placeholder="Numero">
-                <input type="text" id="bairro" name="bairro" placeholder="Bairro">
-                <input type="text" id="cidade" name="cidade" placeholder="Cidade">
-                <input type="text" id="estado" name="estado" placeholder="Estado">
-                <input type="password" id="senha" name="senha" placeholder="Senha">
-                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha">
             </div>
+
+            <div class="inputs">
+                <fieldset>
+                    <legend>Informações pessoais</legend>
+                    
+                    <div class="input-container">
+                        <label for="nome">Nome<span>*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome da empresa" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="cnpj">CNPJ<span>*</span></label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="email">E-mail<span>*</span></label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div class="input-container">
+                        <label for="logradouro">Logradouro<span>*</span></label>
+                        <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="numero">Número<span>*</span></label>
+                        <input type="text" id="numero" name="numero" placeholder="Número" required>
+                        <label for="bairro">Bairro<span>*</span></label>
+                        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="cidade">Cidade<span>*</span></label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="estado">Estado<span>*</span></label>
+                        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Cadastre sua senha</legend>
+                    <div class="input-container">
+                        <label for="senha">Senha<span>*</span></label>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="confirmar-senha">Confirmar senha<span>*</span></label>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha" required>
+                    </div>
+                </fieldset>
+            </div>
+
+            <span class="asterisco">*</span><span class="mensagem">Campos de preenchimento obrigatório. </span>
+
+
             <div class="botoes">
                 <button type="submit">Salvar</button>
                 <button type="button">Cancelar</button>
             </div>
-        </div>
-        
-    
 
+            <div id="popupContainer" class="popupContainer">
+                <div class="popupContent">
+                    <span id="popupMessage"></span>
+                    <button id="btnFecharPopup">Fechar</button>
+                </div>
+            </div>
+      
+        </div>
     </main>
-    
+
     <footer class="rodape">
         <p class="rodape-texto">Recicle.me</p>
-        <img class="rodape-img"  src="C:\Users\beatr\Desktop\RECICLE.ME\logos\logo-200px.png" alt="LogoRecicleME">
+        <img class="rodape-img" src="C:\Users\beatr\Desktop\RECICLE.ME\logos\logo-200px.png" alt="LogoRecicleME">
     </footer>
 
     <!-- JS PARA OS BUTTON RADIOS -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-          const opcaoDescartar = document.getElementById('descartar');
-          const opcaoDivulgar = document.getElementById('divulgar');
-        
-          opcaoDescartar.addEventListener('change', function() {
-            if (opcaoDescartar.checked) {
-              window.location.href = 'nova-conta-cliente.html'; 
-            }
-          });
-        
-          opcaoDivulgar.addEventListener('change', function() {
-            if (opcaoDivulgar.checked) {
-              window.location.href = 'nova-conta-coletor.html'; 
-            }
-          });
+            const opcaoDescartar = document.getElementById('descartar');
+            const opcaoDivulgar = document.getElementById('divulgar');
+
+            opcaoDescartar.addEventListener('change', function() {
+                if (opcaoDescartar.checked) {
+                    window.location.href = 'nova-conta-cliente.html';
+                }
+            });
+
+            opcaoDivulgar.addEventListener('change', function() {
+                if (opcaoDivulgar.checked) {
+                    window.location.href = 'nova-conta-coletor.html';
+                }
+            });
         });
 
         // Verifica se há um estado salvo para os botões de rádio
-if(localStorage.getItem('opcaoSelecionada')) {
-    
-    const opcaoSelecionada = localStorage.getItem('opcaoSelecionada');
+        if(localStorage.getItem('opcaoSelecionada')) {
+            const opcaoSelecionada = localStorage.getItem('opcaoSelecionada');
+            document.getElementById(opcaoSelecionada).checked = true;
+        }
 
-    
-    document.getElementById(opcaoSelecionada).checked = true;
-}
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                localStorage.setItem('opcaoSelecionada', this.id);
+            });
+        });
 
+        document.addEventListener("DOMContentLoaded", function() {
+    const inputsObrigatorios = document.querySelectorAll('input[required]');
+    const mensagemObrigatorio = document.querySelector('.mensagem-obrigatorio');
 
-document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        
-        localStorage.setItem('opcaoSelecionada', this.id);
+    inputsObrigatorios.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() === '') {
+                mensagemObrigatorio.style.display = 'block';
+            } else {
+                mensagemObrigatorio.style.display = 'none';
+            }
+        });
     });
 });
 
-        </script>
-        <!-- JS PARA OS BUTTON RADIOS -->
-        
+    // Função para exibir o pop-up com uma mensagem específica
+function mostrarPopup(mensagem) {
+    document.getElementById('popupMessage').innerText = mensagem;
+    document.getElementById('popupContainer').style.display = 'flex';
+}
+
+// Função para fechar o pop-up
+function fecharPopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
+
+// Adiciona evento de clique ao botão Fechar
+document.getElementById('btnFecharPopup').addEventListener('click', fecharPopup);
+
+// Adiciona evento de clique ao botão Salvar
+document.querySelector('.botoes button[type="submit"]').addEventListener('click', function() {
+    mostrarPopup("Conta criada com sucesso!");
+});
+
+// Adiciona evento de clique ao botão Cancelar
+document.querySelector('.botoes button[type="button"]').addEventListener('click', function() {
+    mostrarPopup("Criação de conta cancelada.");
+});
+      
+    </script>
 </body>
 </html>
