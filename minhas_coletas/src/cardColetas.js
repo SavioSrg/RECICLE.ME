@@ -117,7 +117,8 @@ class CardColetas extends HTMLElement {
         .card-info {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 210px;
+            height: 527px;
             background-color: #62996B;
             border-radius: 15px;
             text-align: center;
@@ -182,6 +183,37 @@ class CardColetas extends HTMLElement {
         }
         .img-reciclagem img {
             padding: 4.15rem;
+        }
+
+        @media screen and (max-width: 1400px){
+            .card-info {
+                width: 200px;
+                max-height: 355px;
+                margin: 0 auto 3rem;
+            }
+
+            .tempo, .informacoes {
+                font-size: small;
+                padding: 0;
+            }
+
+            span#categoria {
+                font-size: large;
+                padding: 0.5rem;
+            }
+
+            select#status {
+                margin: 0.5rem;
+            }
+
+            .img-categoria img {
+                margin: 0;
+            }
+
+            .img-reciclagem img {
+                padding: 3.1rem 4.4rem;
+            }
+            
         }
         `
 

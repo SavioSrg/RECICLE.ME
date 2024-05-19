@@ -1,5 +1,9 @@
 /*Título da página */
 
+body {
+    background-color: #fafafa;
+}
+
 .conteudo-perfil {
     display: flex;
 }
@@ -10,7 +14,7 @@
 }
 
 #icone-perfil {
-    height: 4rem;
+    height: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -19,7 +23,7 @@
 
 /*Conteúdo */
 section{
-    margin: 2rem 4rem;
+    margin: 0 2rem 4rem;
 }
 
 #cards {

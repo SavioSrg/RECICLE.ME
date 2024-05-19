@@ -28,18 +28,27 @@
     <main>
         <section>
             <div class="conteudo-perfil">
-                <div id="perfil">
-                    <h1>Perfil</h1>
-                    <div id="icone-perfil">
-                        <img src="../imgs/user.png" alt="">
+                <div class="perfil-completo">
+                    <div id="perfil">
+                        <h1>Perfil</h1>
+                        <div id="icone-perfil">
+                            <img src="../imgs/user.png" alt="">
+                        </div>                 
                     </div>
-                    
+                    <div class="descricao-perfil">
+                        <span>Aqui você pode editar suas informações pessoais ou excluir a sua conta permanentemente.</span>
+                    </div>
                 </div>
+                
                 <div id="card-infos">
                     <div id="formulario">
+                        <label for="nome">Nome:</label>
                         <input type="text" name="Nome" id="nome" placeholder="Nome completo">
+                        <label for="cpf">CPF:</label>
                         <input type="number" name="CPF" id="cpf" placeholder="CPF">
+                        <label for="email">E-mail:</label>
                         <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                        <label for="cidade">Cidade:</label>
                         <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
                     </div>
                     <div>

@@ -1,8 +1,8 @@
 /*Conteúdo */
 section.cadastro {
     display: flex;
-    margin: 1.5rem 4rem;
-    padding: 2rem;
+    margin: 0 4rem;
+    padding: 1.5rem;
 }
 
 section.listagem {
