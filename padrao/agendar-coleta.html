@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agendar-coleta.css">
+    <link rel="shortcut icon" href="/logos/favicon.png" type="image/x-icon">
+    <link rel="shortcut" href="../imgs/">
+    <script src=""></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap">
+    <title>Início</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav  class="cabecalho-menu">
+            <a class="inicio">Início</a>
+            <a class="como-descartar">Como <br />Descartar</a>
+            <a class="login" >Login</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="espaço">
+            <div class="agendar-coleta-logo">
+                <p>Agendar </br>Coleta <img class="relogio" src="/imgs/logo1.png" alt="logorelogio"></p>
+            </div>
+
+            <div> </div>
+                <div class="caixa1"> 
+                    <div class="numero-coleta">
+                            <label class="linha">Coleta Número: 2222</label>
+                    </div>
+                        <div class="formulario">
+                            <div class="linha">
+                                <label for="nome">Categoria:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Plástico">
+                            </div>
+                            <div class="linha">
+                                <div class="linha">
+                                    <label for="produtos">Produto:</label>
+                                    <input type="text" id="produto" name="produto" placeholder="Garrafa Pet">
+                                </div>
+                                <div class="linha">
+                                    <div class="linha">
+                                        <label for="data">Data:</label>
+                                        <input type="date" id="data" name="data" class="input-custom">
+                                    </div>     
+                                    <div class="linha">
+                                        <label for="horario">Horário:</label>
+                                        <input type="text" id="horario" name="horario" class="input-custom" placeholder="HH:MM">
+                                    </div>
+                                    <div class="linha">
+                                        <label for="produtos">Coletor:</label>
+                                        <input type="text" id="coletor" name="coletor" placeholder="Recicle LTDA">
+                                    </div> 
+                                    <div class="linha">
+                                        <label for="entrega">Entrega:</label>
+                                        <div class="entrega-buttons">
+                                            <button id="retirar-btn" class="entrega-btn">Retirar</button>
+                                            <button id="entregar-btn" class="entrega-btn">Entregar</button>
+                                        </div>
+                                        <div class="linha-local">
+                                            <label class="local" for="horario">Local:</label>
+                                            <input type="text" id="local" name="local" placeholder="Rua, n, Bairro, Belo Horizonte - MG">
+                                        </div>
+                                        <div class="agendar-cancelar-buttons">
+                                            <button id="agendar-btn" class="agendar-btn">Agendar</button>
+                                            <button id="cancelar-btn" class="agendar-btn">Cancelar</button>
+                                        </div>
+                                    </div>                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img"  src="/logos/logo-transparente-500px.png" alt="LogoRecicleME">
+    </footer>
+</body>
+</html>
