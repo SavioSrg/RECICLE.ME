@@ -38,60 +38,89 @@
                         </div>
                     </div>
                     <div class="descricao-perfil">
-                        <span>Aqui você pode editar suas informações pessoais ou excluir a sua conta permanentemente.</span>
+                        <span>Aqui você pode <b>editar as informações</b> da sua empresa ou do seu negócio pessoal, 
+                            <b>alterar sua senha</b> de acesso ao sistema, <b>cadastrar serviços de coleta</b> que você realiza,
+                            ou ainda, pode excluir a sua conta
+                            permanentemente.</span>
                     </div>
                 </div>
                 <div id="card-infos">
                     <div id="formulario">
                         <fieldset id="infos-pessoais">
                             <legend>Informações pessoais</legend>
-                            <input type="text" name="Nome" id="nome" placeholder="Nome da empresa">
-                            <input type="number" name="CNPJ" id="cnpj" placeholder="CNPJ">
-                            <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                            <div class="campos-forms">
+                                <label for="nome">Nome<span>*</span></label>
+                                <input type="text" name="Nome" id="nome" placeholder="Nome da empresa">
+                            </div>
+                            <div class="campos-forms">
+                                <label for="cnpj">CNPJ<span>*</span></label>
+                                <input type="number" name="CNPJ" id="cnpj" placeholder="CNPJ">
+                            </div>
+                            <div class="campos-forms">
+                                <label for="email">E-mail<span>*</span></label>
+                                <input type="email" name="E-mail" id="email" placeholder="E-mail">
+                            </div>
                         </fieldset>
                         <fieldset>
                             <legend>Endereço</legend>
                             <div class="endereco">
-                                <input type="text" name="rua" id="rua" placeholder="Logradouro">
-                                <input type="number" name="numero" id="numero" placeholder="Número">
-                                <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
-                                <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
-                                <select name="estado" id="estado" placeholder="Estado">
-                                    <option value="Estado">Estado</option>
-                                    <option value="AC">Acre</option>
-                                    <option value="AL">Alagoas</option>
-                                    <option value="AP">Amapá</option>
-                                    <option value="AM">Amazonas</option>
-                                    <option value="BA">Bahia</option>
-                                    <option value="CE">Ceará</option>
-                                    <option value="DF">Distrito Federal</option>
-                                    <option value="ES">Espírito Santo</option>
-                                    <option value="GO">Goiás</option>
-                                    <option value="MA">Maranhão</option>
-                                    <option value="MT">Mato Grosso</option>
-                                    <option value="MS">Mato Grosso do Sul</option>
-                                    <option value="MG">Minas Gerais</option>
-                                    <option value="PA">Pará</option>
-                                    <option value="PB">Paraíba</option>
-                                    <option value="PR">Paraná</option>
-                                    <option value="PE">Pernambuco</option>
-                                    <option value="PI">Piauí</option>
-                                    <option value="RJ">Rio de Janeiro</option>
-                                    <option value="RN">Rio Grande do Norte</option>
-                                    <option value="RS">Rio Grande do Sul</option>
-                                    <option value="RO">Rondônia</option>
-                                    <option value="RR">Roraima</option>
-                                    <option value="SC">Santa Catarina</option>
-                                    <option value="SP">São Paulo</option>
-                                    <option value="SE">Sergipe</option>
-                                    <option value="TO">Tocantins</option>
-                                </select>
+                                <div class="campos-forms">
+                                    <label for="rua">Rua/Avenida<span>*</span></label>
+                                    <input type="text" name="rua" id="rua" placeholder="Logradouro">
+                                </div>
+                                <div style="display: flex;">
+                                    <div class="campos-forms" style="width: 29%; padding-inline-end: 0.8rem;">
+                                        <label for="numero">Nº<span>*</span></label>
+                                        <input type="number" name="numero" id="numero" placeholder="Número">
+                                    </div>
+                                    <div class="campos-forms" style="width: 70%;">
+                                        <label for="bairro">Bairro<span>*</span></label>
+                                        <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
+                                    </div>
+                                </div>
+                                
+                                <div class="campos-forms">
+                                    <label for="cidade">Cidade<span>*</span></label>
+                                    <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
+                                </div>
+                                <div class="campos-forms">
+                                    <label for="estado">Estado<span>*</span></label>
+                                    <select name="estado" id="estado" placeholder="Estado">
+                                        <option value="Estado">Selecione...</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
                             </div>
                         </fieldset>
-
-
                     </div>
                     <div>
+                        <p><span>*</span> Campos de preenchimento obrigatório.</p>
                         <button type="button" id="alterar-senha">Alterar senha</button>
                     </div>
                     <div class="cadastrar-servico">

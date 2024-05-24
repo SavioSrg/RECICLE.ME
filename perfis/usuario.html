@@ -36,20 +36,22 @@
                         </div>                 
                     </div>
                     <div class="descricao-perfil">
-                        <span>Aqui você pode editar suas informações pessoais ou excluir a sua conta permanentemente.</span>
+                        <span>Aqui você pode <b>editar suas informações</b> pessoais, <b>alterar sua senha</b> de
+                             acesso ao sistema, ou excluir a sua conta permanentemente.</span>
                     </div>
                 </div>
                 
                 <div id="card-infos">
                     <div id="formulario">
-                        <label for="nome">Nome:</label>
-                        <input type="text" name="Nome" id="nome" placeholder="Nome completo">
-                        <label for="cpf">CPF:</label>
-                        <input type="number" name="CPF" id="cpf" placeholder="CPF">
-                        <label for="email">E-mail:</label>
-                        <input type="email" name="E-mail" id="email" placeholder="E-mail">
-                        <label for="cidade">Cidade:</label>
-                        <input type="text" name="Cidade" id="cidade" placeholder="Cidade">
+                        <label for="nome">Nome:<span>*</span></label>
+                        <input type="text" name="Nome" id="nome" placeholder="Nome completo" style="width: 90%;">
+                        <label for="cpf">CPF:<span>*</span></label>
+                        <input type="number" name="CPF" id="cpf" placeholder="CPF" style="width: 90%;">
+                        <label for="email">E-mail:<span>*</span></label>
+                        <input type="email" name="E-mail" id="email" placeholder="E-mail" style="width: 90%;">
+                        <label for="cidade">Cidade:<span>*</span></label>
+                        <input type="text" name="Cidade" id="cidade" placeholder="Cidade" style="width: 90%;">
+                        <p><span>*</span> Campos de preenchimento obrigatório.</p>
                     </div>
                     <div>
                         <button type="button" id="alterar-senha">Alterar senha</button>

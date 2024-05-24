@@ -35,10 +35,31 @@
         <section class="cadastro">
             <div id="card-servico">
                 <h3>Cadastre seu serviço</h3>
-                <input type="text" name="horario" id="horarioAtendimento" placeholder="Horário de coletagem">
-                <input type="text" name="categoria" id="categoria" placeholder="Categoria">
-                <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
-                <button type="button">Cadastrar serviço</button>
+                <div class="campos-forms">
+                    <label for="horarioAtendimento">Horário<span>*</span></label>
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="7:00 às 11:00">
+                </div>
+                <div class="campos-forms">
+                    <label for="categoria">Categoria<span>*</span></label>
+                    <select name="categoria" id="categoria">
+                        <option>Selecione...</option>
+                        <option value="plastico">Plástico</option>
+                        <option value="vidro">Vidro</option>
+                        <option value="papel">Papel</option>
+                        <option value="metal">Metal</option>
+                        <option value="organico">Orgânico</option>
+                    </select>
+                </div>
+                <div class="campos-forms">
+                    <label for="descricao">Descrição<span>*</span></label>
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                </div>
+                <div>
+                    <p><span>*</span> Campos de preenchimento obrigatório.</p>
+                </div>
+                <div id="button">
+                    <button type="button">Cadastrar serviço</button>
+                </div>
             </div>
         </section>
         <section class="listagem">

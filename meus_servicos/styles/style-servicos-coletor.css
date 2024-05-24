@@ -1,8 +1,12 @@
 /*Conteúdo */
+body {
+    background-color: #fafafa;
+}
+
 section.cadastro {
     display: flex;
     margin: 0 4rem;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem 1rem;
 }
 
 section.listagem {
@@ -28,32 +32,45 @@ div#perfil + div {
 #card-servico {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
-    background-color: rgb(65, 75, 59, .6);
+    background-color: #C0C0C0;
     border-radius: 10px;
     margin: auto;
     padding: 1rem 2.5rem;
-    color: #D9D9D9;
+    color: #0c0c0c;
+}
+#card-servico div#button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-input, button, textarea {
+input, button, textarea, select {
     width: 75%;
     height: 30px;
     border: none;
     border-radius: 10px;
-    background-color: #D9D9D9;
+    background-color: rgb(109, 143, 100, .56);
     margin: 0.5rem;
     padding: 0.3rem;
-    color: #848484;
 }
 
 textarea {
     height: 60px;
 }
 
+.campos-forms {
+    display: flex;
+    align-items: center;
+}
+
+.campos-forms label span, div p span {
+    color: red;
+}
+
 input::placeholder, textarea::placeholder {
-    color: #848484;
+    color: #D9D9D9;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -73,10 +90,19 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(65, 75, 59, .6);
+    background-color: #6d8f64;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 10px;
+}
+
+.servico input::placeholder, .servico textarea::placeholder {
+    color: #7a7979;
+}
+
+.servico input, .servico textarea {
+    background-color: #C0C0C0;
+    color: #727070;
 }
 .botoes {
     display: flex;

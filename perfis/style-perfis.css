@@ -17,9 +17,9 @@
     margin: 0px;
     padding: 0px;
 }
- body {
+body {
     background-color: #fafafa;
- }
+}
 
 /* barra de menu */
 .cabecalho{
@@ -132,9 +132,9 @@ input, select{
     border: none;
     border-radius: 10px;
     height: 30px;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 0.5rem 0.3rem;
+    padding-inline: 0.6rem;
     text-align: left;
-    /* padding-inline: 0.6rem; */
     width: 100%;
 }
 
@@ -154,19 +154,12 @@ button#cadastrar-servico {
     text-align: center;
 }
 
-input#bairro {
-    width: 70%;
-}
-
-input#numero {
-    width: 28%;
-}
-
 div#formulario+div {
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    padding-inline: 1.7rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 0.7rem 1rem;
 }
 
 button#alterar-senha {
@@ -227,6 +220,15 @@ button#excluir {
     margin-inline: 1.3rem;
     display: flex;
     justify-content: space-between;
+}
+
+.campos-forms {
+    display: flex;
+    align-items: center;
+}
+
+.campos-forms label span, legend span, p span, #formulario label span{
+    color: red;
 }
 
 /*rodape */
