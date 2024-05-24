@@ -184,6 +184,20 @@ body{
     text-align: center;
 }
 
+.mensagem{
+    display: flex;
+    align-items: center;
+}
+.mensagem-erro{
+    color:red;
+    font-size: 11px;
+}
+
+.img-atencao{
+    width: 17px;
+    height:17px;
+    padding: 5px;
+}
 .botao-login {
     width: 117px;
     height: 20px;
