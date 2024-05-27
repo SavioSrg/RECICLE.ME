@@ -28,7 +28,7 @@ main{
 }
 
 .titulo1{
-    background-color: var(--cor1);
+    background-color: var(--cor5);
     padding: 10px 20px;
     font-size: 26px;
     font-family: var(--fonte-destaque);
