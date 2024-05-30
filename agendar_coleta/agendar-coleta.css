@@ -31,19 +31,31 @@
     display: flex;
     justify-content: center;
     padding: 25px;
-
-
 }
 
 .cabecalho-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     gap: 35px;
     align-items: center;
     height: 40px;
     width: 720px;
     background-color: var(--cor1);
     border-radius: 15px;
+    gap: 50px;
+}
+
+.cabecalho-menu a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.perfil {
+    position: relative;
+    left: 20%;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    color: #FFFFFF ;
 }
 
 .inicio{
@@ -51,20 +63,25 @@
     color: #FFFFFF;
     font-weight: 600;
     font-family: "Playfair Display", serif;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 .como-descartar{
     text-align: center;
-     font-size: 14px;
-     color: #FFFFFF;
-     font-weight: 600;
-     font-family: "Playfair Display", serif;
-
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    position: relative;
+    right: 20px;
 }
 
-.login{
-    padding-left: 480px;
+.login {
+    display: flex;
+    justify-content: end;
+    padding-left: 180px;
+    position: relative;
+    right: 30px;
     font-size: 14px;
     color: #FFFFFF;
     font-weight: 600;
