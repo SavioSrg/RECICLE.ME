@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../padrao/style.css">
+    <link rel="stylesheet" href="../meus_servicos/styles/style-servicos-coletor.css">
+    <!-- <link rel="stylesheet" href="/perfis/style-perfis.css"> -->
+    <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <title>Meus Serviços</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a class="inicio">Início</a>
+            <a class="como-descartar">Como <br />Descartar</a>
+            <a class="como-descartar">Minhas Coletas</a>
+            <a class="como-descartar" style="color: #414B3B;">Meus Serviços</a>
+            <a class="como-descartar">Perfil</a>
+            <a class="login">Sair</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="perfil">
+            <h1>Meus <br>Serviços</h1>
+        </div>
+        <section class="cadastro">
+            <div id="card-servico">
+                <h3>Cadastre seu serviço</h3>
+                <div class="campos-forms">
+                    <label for="horarioAtendimento">Horário<span>*</span></label>
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="7:00 às 11:00">
+                </div>
+                <div class="campos-forms">
+                    <label for="categoria">Categoria<span>*</span></label>
+                    <select name="categoria" id="categoria">
+                        <option>Selecione...</option>
+                        <option value="plastico">Plástico</option>
+                        <option value="vidro">Vidro</option>
+                        <option value="papel">Papel</option>
+                        <option value="metal">Metal</option>
+                        <option value="organico">Orgânico</option>
+                    </select>
+                </div>
+                <div class="campos-forms">
+                    <label for="descricao">Descrição<span>*</span></label>
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                </div>
+                <div>
+                    <p><span>*</span> Campos de preenchimento obrigatório.</p>
+                </div>
+                <div id="button">
+                    <button type="button">Cadastrar serviço</button>
+                </div>
+            </div>
+        </section>
+        <section class="listagem">
+            <div class="cards-listagem">
+                <div class="servico">
+                    <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="Horário de coletagem">
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                    <div class="botoes">
+                        <button type="button" class="editar">Editar</button>
+                        <button type="button" class="excluir">Excluir</button>
+                    </div>
+                </div>
+
+                <div class="servico">
+                    <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="Horário de coletagem">
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                    <div class="botoes">
+                        <button type="button" class="editar">Editar</button>
+                        <button type="button" class="excluir">Excluir</button>
+                    </div>
+                </div>
+
+                <div class="servico">
+                    <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="Horário de coletagem">
+                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                    <div class="botoes">
+                        <button type="button" class="editar">Editar</button>
+                        <button type="button" class="excluir">Excluir</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img" src="../logos/logosvg.svg" alt="LogoRecicleME">
+    </footer>
+</body>
+
+</html>
