@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../padrao/style.css">
     <link rel="stylesheet" href="../meus_servicos/styles/style-servicos-coletor.css">
-    <!-- <link rel="stylesheet" href="/perfis/style-perfis.css"> -->
     <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
     <title>Meus Serviços</title>
     <style>
@@ -18,12 +17,12 @@
 <body>
     <header class="cabecalho">
         <nav class="cabecalho-menu">
-            <a class="inicio">Início</a>
-            <a class="como-descartar">Como <br />Descartar</a>
-            <a class="como-descartar">Minhas Coletas</a>
-            <a class="como-descartar" style="color: #414B3B;">Meus Serviços</a>
-            <a class="como-descartar">Perfil</a>
-            <a class="login">Sair</a>
+            <a href="" class="inicio">Início</a>
+            <a href="/material/materiais.html" class="como-descartar">Como <br />Descartar</a>
+            <a href="/minhas_coletas/coletor.html" class="como-descartar">Minhas Coletas</a>
+            <a href="/meus_servicos/coletor.html" class="como-descartar" style="color: #414B3B;">Meus Serviços</a>
+            <a href="/perfis/coletor.html" class="como-descartar">Perfil</a>
+            <a href="" class="login">Sair</a>
         </nav>
 
     </header>
@@ -37,7 +36,7 @@
                 <h3>Cadastre seu serviço</h3>
                 <div class="campos-forms">
                     <label for="horarioAtendimento">Horário<span>*</span></label>
-                    <input type="text" name="horario" id="horarioAtendimento" placeholder="7:00 às 11:00">
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="Exemplo: 7:00 às 11:00">
                 </div>
                 <div class="campos-forms">
                     <label for="categoria">Categoria<span>*</span></label>
@@ -51,8 +50,32 @@
                     </select>
                 </div>
                 <div class="campos-forms">
+                    <label>Tipo de entrega<span>*</span></label>
+                    <div id="escolher-entrega">
+                        <input type="checkbox" name="entrega" id="recolher">
+                        <label for="entrega" style="width: 31%;">Recolher em domicílio</label>
+                        
+                        <input type="checkbox" name="entrega" id="receber">
+                        <label for="entrega" style="width: 27%;">Receber no local</label>
+                        
+                    </div>
+                    <div class="info">
+                        <div class="button">
+                            <span id="button-info">?</span>
+                        </div>
+                        <div class="info-texto">
+                            <span>Marque <b class="texto">"Recolher em domicílio"</b> caso você aceite ir até a 
+                                residência do cliente para recolher o material a ser coletado.
+                                <br><br>
+                                Marque <b class="texto">"Receber no local"</b> se você permite que o cliente vá até o seu encontro para
+                                entregar o material a ser coletado.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="campos-forms">
                     <label for="descricao">Descrição<span>*</span></label>
-                    <textarea name="descricao" id="descricao" placeholder="Descrição do serviço"></textarea>
+                    <textarea name="descricao" id="descricao" placeholder="Digite aqui os materiais que se incluem neste serviço, os dias que você os recolhe, além de outras informações que achar pertinente."></textarea>
                 </div>
                 <div>
                     <p><span>*</span> Campos de preenchimento obrigatório.</p>
