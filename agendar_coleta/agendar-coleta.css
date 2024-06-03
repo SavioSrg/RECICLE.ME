@@ -50,13 +50,6 @@
     text-decoration: none;
 }
 
-.perfil {
-    position: relative;
-    left: 20%;
-    font-family: "Playfair Display", serif;
-    font-size: 14px;
-    color: #FFFFFF ;
-}
 
 .inicio{
     font-size: 14px;
@@ -79,12 +72,11 @@
 .login {
     display: flex;
     justify-content: end;
-    padding-left: 180px;
+    padding-left: 10px;
     position: relative;
-    right: 30px;
+    left: 130px;
     font-size: 14px;
     color: #FFFFFF;
-    font-weight: 600;
     font-family: "Playfair Display", serif;
     padding-right: 5px;
 }
