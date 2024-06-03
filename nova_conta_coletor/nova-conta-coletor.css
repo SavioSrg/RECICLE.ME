@@ -48,6 +48,7 @@ body{
 
 .login {
     padding-left: 480px;
+    text-decoration: none
 }
 
 /* conteudo */
@@ -59,7 +60,7 @@ body{
 /* container principal */
 .container {
     width: 470px;
-    height: 590px;
+    height: 600px;
     display: flex; 
     margin: auto 35% auto; 
     flex-direction: column;
@@ -82,7 +83,7 @@ body{
 
 .opcoes label {
     display: flex; 
-    margin-top: 10px;
+    margin-top: 3px;
     align-items: center;
     margin-left: 10px;
 }
@@ -342,7 +343,7 @@ margin-left: 16px;
 
 .rodape-img {
     position: absolute;
-    padding-bottom: 5.7%;
+    padding-bottom: 4%;
     width: 40px;
     height: 35px;
 }

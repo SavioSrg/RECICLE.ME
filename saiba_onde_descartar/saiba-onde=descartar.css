@@ -132,7 +132,8 @@ h3, h2{
 }
 
 .conteudo4{
-padding-top: 6rem;
+padding-top: 4rem;
+padding-bottom: 1rem;
 padding-right: 5rem;
 align-self: flex-end;
 }
@@ -193,7 +194,7 @@ align-self: flex-end;
     border: none;
     border-radius: 15%;
     background-color: rgba(128, 128, 128, 0.315);
-  transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 
 #localize:hover {

@@ -15,16 +15,16 @@
         <nav class="cabecalho-menu">
             <a class="inicio">Início</a>
             <a class="como-descartar">Como <br />Descartar</a>
-            <a class="login">Login</a>
+            <a href='../login/login-teste.html' class="login" >Login</a>
         </nav>
     </header>
 
     <!-- Logo das Folhas -->
-    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\3folhas-transparente.png" alt="logo-folhas" class="logo-folhas1">
-    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\3folhas-transparente.png" alt="logo-folhas" class="logo-folhas2">
+    <img src="../logos/3folhas-transparente.png" alt="logo-folhas" class="logo-folhas1">
+    <img src="../logos/3folhas-transparente.png" alt="logo-folhas" class="logo-folhas2">
     <!-- Logo dos Detalhes das Folhas-->
-    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\Vector.png" alt="logo-folhas" class="logo-detalhes1">
-    <img src="C:\Users\beatr\Desktop\RECICLE.ME\logos\Vector.png" alt="logo-folhas" class="logo-detalhes2">
+    <img src="../logos/Vector.png" alt="logo-folhas" class="logo-detalhes1">
+    <img src="../logos/Vector.png" alt="logo-folhas" class="logo-detalhes2">
 
     <main>
         <p class="txt-nova-conta">Nova <br> Conta</p>
@@ -58,6 +58,11 @@
                         <label for="email">E-mail<span>*</span></label>
                         <input type="email" id="email" name="email" placeholder="E-mail" required>
                     </div>
+
+                    <div class="input-container">
+                        <label for="telefone">Telefone<span>*</span></label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                  </div>
                 </fieldset>
 
                 <fieldset>
@@ -104,7 +109,7 @@
 
 
             <div class="botoes">
-                <button type="submit">Salvar</button>
+                <button id="btnSalvar" type="submit">Salvar</button>
                 <button type="button">Cancelar</button>
             </div>
 
@@ -120,79 +125,11 @@
 
     <footer class="rodape">
         <p class="rodape-texto">Recicle.me</p>
-        <img class="rodape-img" src="C:\Users\beatr\Desktop\RECICLE.ME\logos\logo-200px.png" alt="LogoRecicleME">
+        <img class="rodape-img" src="../logos/logo-200px.png" alt="LogoRecicleME">
     </footer>
 
-    <!-- JS PARA OS BUTTON RADIOS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const opcaoDescartar = document.getElementById('descartar');
-            const opcaoDivulgar = document.getElementById('divulgar');
-
-            opcaoDescartar.addEventListener('change', function() {
-                if (opcaoDescartar.checked) {
-                    window.location.href = 'nova-conta-cliente.html';
-                }
-            });
-
-            opcaoDivulgar.addEventListener('change', function() {
-                if (opcaoDivulgar.checked) {
-                    window.location.href = 'nova-conta-coletor.html';
-                }
-            });
-        });
-
-        // Verifica se há um estado salvo para os botões de rádio
-        if(localStorage.getItem('opcaoSelecionada')) {
-            const opcaoSelecionada = localStorage.getItem('opcaoSelecionada');
-            document.getElementById(opcaoSelecionada).checked = true;
-        }
-
-        document.querySelectorAll('input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                localStorage.setItem('opcaoSelecionada', this.id);
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-    const inputsObrigatorios = document.querySelectorAll('input[required]');
-    const mensagemObrigatorio = document.querySelector('.mensagem-obrigatorio');
-
-    inputsObrigatorios.forEach(input => {
-        input.addEventListener('blur', function() {
-            if (this.value.trim() === '') {
-                mensagemObrigatorio.style.display = 'block';
-            } else {
-                mensagemObrigatorio.style.display = 'none';
-            }
-        });
-    });
-});
-
-    // Função para exibir o pop-up com uma mensagem específica
-function mostrarPopup(mensagem) {
-    document.getElementById('popupMessage').innerText = mensagem;
-    document.getElementById('popupContainer').style.display = 'flex';
-}
-
-// Função para fechar o pop-up
-function fecharPopup() {
-    document.getElementById('popupContainer').style.display = 'none';
-}
-
-// Adiciona evento de clique ao botão Fechar
-document.getElementById('btnFecharPopup').addEventListener('click', fecharPopup);
-
-// Adiciona evento de clique ao botão Salvar
-document.querySelector('.botoes button[type="submit"]').addEventListener('click', function() {
-    mostrarPopup("Conta criada com sucesso!");
-});
-
-// Adiciona evento de clique ao botão Cancelar
-document.querySelector('.botoes button[type="button"]').addEventListener('click', function() {
-    mostrarPopup("Criação de conta cancelada.");
-});
-      
-    </script>
+    <script src="nova-conta-coletor.js"></script>
+    
+    
 </body>
 </html>
