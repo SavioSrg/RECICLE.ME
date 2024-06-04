@@ -24,47 +24,55 @@
     display: flex;
     justify-content: center;
     padding: 25px;
-
-
 }
 
 .cabecalho-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     gap: 35px;
     align-items: center;
     height: 40px;
     width: 720px;
     background-color: var(--cor1);
     border-radius: 15px;
+    gap: 50px;
 }
+
+.cabecalho-menu a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 .inicio{
     font-size: 14px;
     color: #FFFFFF;
     font-weight: 600;
     font-family: "Playfair Display", serif;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 .como-descartar{
     text-align: center;
-     font-size: 14px;
-     color: #FFFFFF;
-     font-weight: 600;
-     font-family: "Playfair Display", serif;
-
-}
-
-.login{
-    padding-left: 480px;
     font-size: 14px;
     color: #FFFFFF;
     font-weight: 600;
     font-family: "Playfair Display", serif;
-    padding-right: 5px;
+    position: relative;
+    left: 20px;
 }
 
+.login {
+    display: flex;
+    justify-content: end;
+    padding-left: 10px;
+    position: relative;
+    left: 130px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: "Playfair Display", serif;
+    padding-right: 5px;
+}
 
 /*rodape */
 .rodape{
