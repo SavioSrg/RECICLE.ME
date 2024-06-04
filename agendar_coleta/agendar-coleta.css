@@ -149,6 +149,17 @@ label {
     font-weight: 500;
 }
 
+#nome::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1)
+}
+
+#coletor::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1);
+
+}
+
 input[type="text"] {
     width: 330px;
     height: 31px;
