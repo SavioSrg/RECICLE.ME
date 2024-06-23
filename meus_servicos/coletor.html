@@ -89,12 +89,52 @@
         <section class="listagem">
             <div id="card-confirmacao">
                 <div></div>
-                <div id="confirmacao" class="hidden">
+                <div id="confirmacao0" class="hidden">
                     <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
                     <div>
                         <button type="button" id="editar"
-                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
-                        <button type="button" id="excluir" class="excluir" onclick="excluirServico()">Excluir</button>
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao0').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(0)">Excluir</button>
+                    </div>
+                </div>
+                <div id="confirmacao1" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar"
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao1').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(1)">Excluir</button>
+                    </div>
+                </div>
+                <div id="confirmacao2" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar"
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao2').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(2)">Excluir</button>
+                    </div>
+                </div>
+                <div id="confirmacao3" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar"
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao3').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(3)">Excluir</button>
+                    </div>
+                </div>
+                <div id="confirmacao4" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar"
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao4').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(4)">Excluir</button>
+                    </div>
+                </div>
+                <div id="confirmacao5" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar"
+                            onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao5').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico(5)">Excluir</button>
                     </div>
                 </div>
             </div>
@@ -120,7 +160,7 @@
 
                     <div class="botoes">
                         <button type="button" class="editar0" onclick="habilitaEdicao(0)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(0)">Excluir</button>
                     </div>
                 </div>
 
@@ -142,7 +182,7 @@
                     </div>
                     <div class="botoes">
                         <button type="button" class="editar1" onclick="habilitaEdicao(1)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(1)">Excluir</button>
                     </div>
                 </div>
 
@@ -164,7 +204,7 @@
                     </div>
                     <div class="botoes">
                         <button type="button" class="editar2" onclick="habilitaEdicao(2)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(2)">Excluir</button>
                     </div>
                 </div>
 
@@ -186,7 +226,7 @@
                     </div>
                     <div class="botoes">
                         <button type="button" class="editar3" onclick="habilitaEdicao(3)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(3)">Excluir</button>
                     </div>
                 </div>
 
@@ -208,7 +248,7 @@
                     </div>
                     <div class="botoes">
                         <button type="button" class="editar4" onclick="habilitaEdicao(4)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(4)">Excluir</button>
                     </div>
                 </div>
 
@@ -230,7 +270,7 @@
                     </div>
                     <div class="botoes">
                         <button type="button" class="editar5" onclick="habilitaEdicao(5)">Editar</button>
-                        <button type="button" class="excluir" onclick="abreConfirmacao()">Excluir</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(5)">Excluir</button>
                     </div>
                 </div>
             </div>
@@ -239,7 +279,7 @@
     </main>
 
     <div id="fundo-modal" class="hidden"
-        onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">
+        onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao0').classList.add('hidden'); document.getElementById('confirmacao1').classList.add('hidden'); document.getElementById('confirmacao2').classList.add('hidden'); document.getElementById('confirmacao3').classList.add('hidden'); document.getElementById('confirmacao4').classList.add('hidden'); document.getElementById('confirmacao5').classList.add('hidden')})()">
     </div>
 
 
@@ -248,340 +288,8 @@
         <img class="rodape-img" src="../logos/logosvg.svg" alt="LogoRecicleME">
     </footer>
 
+    <script src="../meus_servicos/funcionalidades.js"></script>
 
-
-
-    <!-- <script src="../meus_servicos/funcionalidades.js"></script> -->
-
-    <script>
-
-        var cardForm = document.getElementById("card-servico");
-        const servicosArray = JSON.parse(localStorage.getItem('servicos'));
-
-        // Faz o cadastro de serviços
-        cardForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            var categoria = document.getElementById("categoria").value;
-            var horario_atendimento = document.getElementById("horarioAtendimento").value;
-            var escolher_recolher = document.getElementById("recolher").checked;
-            var escolher_receber = document.getElementById("receber").checked;
-            var descricao = document.getElementById("descricao").value;
-            //var categoriaEscolhida = document.getElementById("categoria")
-
-            // (categoria.options[categoria.selectedIndex].value != "")
-
-            console.log(horario_atendimento);
-            console.log(categoria);
-            console.log(escolher_recolher);
-            console.log(escolher_receber);
-            console.log(descricao);
-
-            if (horario_atendimento && descricao && (escolher_receber || escolher_recolher) && (categoria != null)) {
-                var servicos = new Array();
-
-                if (localStorage.hasOwnProperty("servicos")) {
-                    //Recuperar os valores de serviços
-                    //Converte de String para Object
-                    servicos = JSON.parse(localStorage.getItem("servicos"));
-                }
-
-                // Adiciona um novo objetivo no array criado
-                servicos.push({ categoria, horario_atendimento, escolher_recolher, escolher_receber, descricao });
-
-                // Salvar no LocalStorage
-                localStorage.setItem("servicos", JSON.stringify(servicos));
-
-                // Recuperar as informações
-                const servico_localstorage = localStorage.getItem("servicos");
-                console.log(servico_localstorage);
-
-                // Converte a string JSON em um objeto JavaScript
-                var dados_servico = JSON.parse(servico_localstorage);
-                console.log(dados_servico);
-
-                alert("Sucesso! Serviço cadastrado.")
-
-                window.location.reload();
-            } else {
-                alert("Ops! Necessário preencher todos os campos obrigatórios para prosseguir.")
-            }
-        });
-
-
-        // Verificar se o dado existe, e se existir, mostra ele nos cards de serviços cadastrados
-        if (servicosArray && servicosArray.length > 0) {
-            for (let i = 0; i < servicosArray.length; i++) {
-                const unidadeArray = servicosArray[i];
-
-                const cardServicoAtual = document.getElementById(`servico${i}`);
-                cardServicoAtual.classList.remove("hidden");
-
-                // Inserir o dado no input
-                document.getElementById(`categoria_card${i}`).innerText = servicosArray[i].categoria;
-                document.getElementById(`dia_horario_card${i}`).value = servicosArray[i].horario_atendimento;
-                document.getElementById(`descricao_card${i}`).innerText = servicosArray[i].descricao;
-
-
-                if (servicosArray[i].escolher_recolher === true) {
-                    document.getElementById(`recolher_card${i}`).checked = true;
-                } else {
-                    document.getElementById(`recolher_card${i}`).checked = false;
-                }
-
-                if (servicosArray[i].escolher_receber === true) {
-                    document.getElementById(`receber_card${i}`).checked = true;
-                } else {
-                    document.getElementById(`receber_card${i}`).checked = false;
-                }
-            }
-        }
-
-
-        // Habilita os botões de edição
-        function habilitaEdicao(numero) {
-            const editarButton = document.querySelector(`.editar${numero}`);
-
-            if (numero === 0) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card0').disabled = false;
-                    document.getElementById('descricao_card0').disabled = false;
-                    document.getElementById('recolher_card0').disabled = false;
-                    document.getElementById('receber_card0').disabled = false;
-                    document.querySelector(".editar0").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card0").classList.add("modoEdicao");
-                    document.getElementById("descricao_card0").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    salvarDados(numero);
-                    document.getElementById('dia_horario_card0').disabled = true;
-                    document.getElementById('descricao_card0').disabled = true;
-                    document.getElementById('recolher_card0').disabled = true;
-                    document.getElementById('receber_card0').disabled = true;
-                    document.querySelector(".editar0").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card0").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card0").classList.remove("modoEdicao");
-                }
-
-
-            } else if (numero === 1) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card1').disabled = false;
-                    document.getElementById('descricao_card1').disabled = false;
-                    document.getElementById('recolher_card1').disabled = false;
-                    document.getElementById('receber_card1').disabled = false;
-                    document.querySelector(".editar1").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card1").classList.add("modoEdicao");
-                    document.getElementById("descricao_card1").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    document.getElementById('dia_horario_card1').disabled = true;
-                    document.getElementById('descricao_card1').disabled = true;
-                    document.getElementById('recolher_card1').disabled = true;
-                    document.getElementById('receber_card1').disabled = true;
-                    document.querySelector(".editar1").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card1").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card1").classList.remove("modoEdicao");
-                }
-
-            } else if (numero === 2) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card2').disabled = false;
-                    document.getElementById('descricao_card2').disabled = false;
-                    document.getElementById('recolher_card2').disabled = false;
-                    document.getElementById('receber_card2').disabled = false;
-                    document.querySelector(".editar2").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card2").classList.add("modoEdicao");
-                    document.getElementById("descricao_card2").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    document.getElementById('dia_horario_card2').disabled = true;
-                    document.getElementById('descricao_card2').disabled = true;
-                    document.getElementById('recolher_card2').disabled = true;
-                    document.getElementById('receber_card2').disabled = true;
-                    document.querySelector(".editar2").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card2").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card2").classList.remove("modoEdicao");
-                }
-
-            } else if (numero === 3) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card3').disabled = false;
-                    document.getElementById('descricao_card3').disabled = false;
-                    document.getElementById('recolher_card3').disabled = false;
-                    document.getElementById('receber_card3').disabled = false;
-                    document.querySelector(".editar3").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card3").classList.add("modoEdicao");
-                    document.getElementById("descricao_card3").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    document.getElementById('dia_horario_card3').disabled = true;
-                    document.getElementById('descricao_card3').disabled = true;
-                    document.getElementById('recolher_card3').disabled = true;
-                    document.getElementById('receber_card3').disabled = true;
-                    document.querySelector(".editar3").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card3").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card3").classList.remove("modoEdicao");
-                }
-            } else if (numero === 4) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card4').disabled = false;
-                    document.getElementById('descricao_card4').disabled = false;
-                    document.getElementById('recolher_card4').disabled = false;
-                    document.getElementById('receber_card4').disabled = false;
-                    document.querySelector(".editar4").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card4").classList.add("modoEdicao");
-                    document.getElementById("descricao_card4").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    document.getElementById('dia_horario_card4').disabled = true;
-                    document.getElementById('descricao_card4').disabled = true;
-                    document.getElementById('recolher_card4').disabled = true;
-                    document.getElementById('receber_card4').disabled = true;
-                    document.querySelector(".editar4").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card4").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card4").classList.remove("modoEdicao");
-                }
-            } else if (numero === 5) {
-                if (editarButton.innerText === "Editar") {
-                    document.getElementById('dia_horario_card5').disabled = false;
-                    document.getElementById('descricao_card5').disabled = false;
-                    document.getElementById('recolher_card5').disabled = false;
-                    document.getElementById('receber_card5').disabled = false;
-                    document.querySelector(".editar5").innerText = "Salvar";
-
-                    document.getElementById("dia_horario_card5").classList.add("modoEdicao");
-                    document.getElementById("descricao_card5").classList.add("modoEdicao");
-                } else if (editarButton.innerText === "Salvar") {
-                    document.getElementById('dia_horario_card5').disabled = true;
-                    document.getElementById('descricao_card5').disabled = true;
-                    document.getElementById('recolher_card5').disabled = true;
-                    document.getElementById('receber_card5').disabled = true;
-                    document.querySelector(".editar5").innerText = "Editar";
-
-                    document.getElementById("dia_horario_card5").classList.remove("modoEdicao");
-                    document.getElementById("descricao_card5").classList.remove("modoEdicao");
-                }
-            }
-        }
-
-        // Abre modal de confirmação de exclusão
-        function abreConfirmacao() {
-            const modal = document.getElementById("confirmacao");
-            const fundo = document.getElementById("fundo-modal");
-
-            modal.classList.remove("hidden");
-            fundo.classList.remove("hidden");
-        }
-
-
-
-        function editarServico() {
-            // Recuperar o array do localStorage e convertê-lo de volta para um array
-            const usuariosString = localStorage.getItem('servicos');
-            const usuariosArray = JSON.parse(usuariosString);
-
-            // Verificar se o array existe
-            if (usuariosArray) {
-                // Pegar o ID a ser alterado do input
-                const idParaAlterar = parseInt(document.getElementById('idParaAlterar').value, 10);
-
-                // Pegar o novo nome do input
-                const novoNome = document.getElementById('novoNome').value;
-
-                // Encontrar o índice do objeto a ser alterado
-                const index = usuariosArray.findIndex(usuario => usuario.id === idParaAlterar);
-
-                // Se o objeto existir no array, alterá-lo
-                if (index !== -1) {
-                    usuariosArray[index].nome = novoNome;
-
-                    // Armazenar o array atualizado de volta no localStorage
-                    localStorage.setItem('usuarios', JSON.stringify(usuariosArray));
-
-                    // Informar o usuário que o objeto foi alterado
-                    alert(`O usuário com ID ${idParaAlterar} foi alterado para ${novoNome}.`);
-                } else {
-                    alert(`O usuário com ID ${idParaAlterar} não foi encontrado.`);
-                }
-            }
-        }
-
-        function salvarDados(id) {
-            // var nome_coletor = document.getElementById("nome").value;
-            // var cnpj_coletor = document.getElementById("cnpj").value;
-            // var email_coletor = document.getElementById("email").value;
-            // var telefone_coletor = document.getElementById("telefone").value;
-            // var logradouro_coletor = document.getElementById("rua").value;
-            // var numero_coletor = document.getElementById("numero").value;
-            // var bairro_coletor = document.getElementById("bairro").value;
-            // var cidade_coletor = document.getElementById("cidade").value;
-            // var estado_coletor = document.getElementById("estado").value;
-
-            alert(id);
-            // var novo_horario_atendimento = document.getElementById(`dia_horario_card${id}`).value;
-            // var novo_escolher_recolher = document.getElementById(`recolher_card${id}`).checked;
-            // var novo_escolher_receber = document.getElementById(`receber_card${id}`).checked;
-            // var nova_descricao = document.getElementById(`descricao_card${id}`).value;
-
-            //document.getElementById('dia_horario_card0').disabled = false;
-                    //document.getElementById('descricao_card0').disabled = false;
-                    //document.getElementById('recolher_card0').disabled = false;
-                    //document.getElementById('receber_card0').disabled = false;
-
-            // let servicos = new Array();
-        
-            // if(localStorage.hasOwnProperty("servicos")){
-            //     servicos = JSON.parse(localStorage.getItem("servicos"));
-            // }
-        
-            // servicos.push({ novo_horario_atendimento, novo_escolher_recolher, novo_escolher_receber, nova_descricao });
-        
-            // localStorage.setItem("servicos", JSON.stringify(servicos));
-        }
-
-
-
-
-
-
-
-
-        function excluirServico() {
-
-            // Recuperar o array do localStorage e convertê-lo de volta para um array
-            const servicosArray2 = JSON.parse(localStorage.getItem('servicos'));
-            console.log(servicosArray2);
-
-            // Verificar se o array existe
-            if (servicosArray2) {
-                // Pegar o nome a ser excluído do input
-                const servicoParaExcluir = document.getElementById('categoria').value;
-                console.log(servicoParaExcluir);
-
-                // Encontrar o índice do item a ser excluído
-                const index = servicosArray2.indexOf(servicoParaExcluir);
-
-                // Se o item existir no array, removê-lo
-                if (index !== -1) {
-                    servicosArray2.splice(index, 1);
-
-                    // Armazenar o array atualizado de volta no localStorage
-                    localStorage.setItem('usuarios', JSON.stringify(servicosArray2));
-
-                    // Informar o usuário que o item foi excluído
-                    alert(`O serviço da categoria ${servicoParaExcluir} foi excluído.`);
-                } else {
-                    alert(`O serviço de ${servicoParaExcluir} não foi encontrado.`);
-                }
-            }
-        }
-    </script>
 </body>
 
 </html>
