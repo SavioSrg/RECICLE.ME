@@ -16,6 +16,10 @@
     padding: 0px;
 }
 
+#link-texto{
+    text-decoration: none;
+}
+
 body{
     background-color: #FAFAFA;
 

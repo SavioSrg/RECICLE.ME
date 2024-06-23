@@ -50,13 +50,6 @@
     text-decoration: none;
 }
 
-.perfil {
-    position: relative;
-    left: 20%;
-    font-family: "Playfair Display", serif;
-    font-size: 14px;
-    color: #FFFFFF ;
-}
 
 .inicio{
     font-size: 14px;
@@ -73,18 +66,17 @@
     font-weight: 600;
     font-family: "Playfair Display", serif;
     position: relative;
-    right: 20px;
+    left: 20px;
 }
 
 .login {
     display: flex;
     justify-content: end;
-    padding-left: 180px;
+    padding-left: 10px;
     position: relative;
-    right: 30px;
+    left: 135px;
     font-size: 14px;
     color: #FFFFFF;
-    font-weight: 600;
     font-family: "Playfair Display", serif;
     padding-right: 5px;
 }
@@ -155,6 +147,17 @@ label {
     bottom: px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+}
+
+#nome::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1)
+}
+
+#coletor::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1);
+
 }
 
 input[type="text"] {
