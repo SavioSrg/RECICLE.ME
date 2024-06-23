@@ -154,6 +154,14 @@ label {
     color: rgba(17, 15, 15, 1)
 }
 
+#nome {
+    background-color: #C0C0C0;
+}
+
+#coletor {
+    background-color: #C0C0C0;
+}
+
 #coletor::placeholder {
     text-align: center;
     color: rgba(17, 15, 15, 1);
