@@ -28,7 +28,7 @@
 
     <main>
         <p class="txt-nova-conta">Nova <br> Conta</p>
-        <div class="container">
+        <form id="dadosFormulario" class="container">
             <div class="opcoes">
                 <div class="opcao-item">
                     <input type="radio" id="descartar" name="opcao" value="descartar">
@@ -46,22 +46,22 @@
                     
                     <div class="input-container">
                         <label for="nome">Nome<span>*</span></label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome da empresa" required>
+                        <input type="text" id="nome" name="nome" placeholder="Nome da empresa" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="cnpj">CNPJ<span>*</span></label>
-                        <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" required>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="email">E-mail<span>*</span></label>
-                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        <input type="email" id="email" name="email" placeholder="E-mail" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="telefone">Telefone<span>*</span></label>
-                        <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+                        <input type="text" id="telefone" name="telefone" placeholder="Telefone" disablead>
                   </div>
                 </fieldset>
 
@@ -70,24 +70,24 @@
 
                     <div class="input-container">
                         <label for="logradouro">Logradouro<span>*</span></label>
-                        <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" required>
+                        <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="numero">Número<span>*</span></label>
-                        <input type="text" id="numero" name="numero" placeholder="Número" required>
+                        <input type="text" id="numero" name="numero" placeholder="Número" disablead>
                         <label for="bairro">Bairro<span>*</span></label>
-                        <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                        <input type="text" id="bairro" name="bairro" placeholder="Bairro" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="cidade">Cidade<span>*</span></label>
-                        <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                        <input type="text" id="cidade" name="cidade" placeholder="Cidade" disablead>
                     </div>
 
                     <div class="input-container">
                         <label for="estado">Estado<span>*</span></label>
-                        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+                        <input type="text" id="estado" name="estado" placeholder="Estado" disablead>
                     </div>
                 </fieldset>
 
@@ -95,12 +95,12 @@
                     <legend>Cadastre sua senha</legend>
                     <div class="input-container">
                         <label for="senha">Senha<span>*</span></label>
-                        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                        <input type="password" id="senha" name="senha" placeholder="Senha">
                     </div>
 
                     <div class="input-container">
                         <label for="confirmar-senha">Confirmar senha<span>*</span></label>
-                        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha" required>
+                        <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirmar senha">
                     </div>
                 </fieldset>
             </div>
@@ -116,11 +116,11 @@
             <div id="popupContainer" class="popupContainer">
                 <div class="popupContent">
                     <span id="popupMessage"></span>
-                    <button id="btnFecharPopup">Fechar</button>
+                    <button onclick="abrirPerfil()" id="btnFecharPopup">Fechar</button>
                 </div>
             </div>
       
-        </div>
+        </form>
     </main>
 
     <footer class="rodape">
@@ -129,6 +129,53 @@
     </footer>
 
     <script src="nova-conta-coletor.js"></script>
+    <script>
+       var cadForm = document.getElementById("dadosFormulario");
+        
+        cadForm.addEventListener("submit", (e) => {
+
+            e.preventDefault();
+        
+            var nome_coletor = document.getElementById("nome").value;
+            var cnpj_coletor = document.getElementById("cnpj").value;
+            var email_coletor = document.getElementById("email").value;
+            var telefone_coletor = document.getElementById("telefone").value;
+            var logradouro_coletor = document.getElementById("logradouro").value;
+            var numero_coletor = document.getElementById("numero").value;
+            var bairro_coletor = document.getElementById("bairro").value;
+            var cidade_coletor = document.getElementById("cidade").value;
+            var estado_coletor = document.getElementById("estado").value;
+            var senha_coletor = document.getElementById("senha").value;
+            var confirmar_coletor = document.getElementById("confirmar-senha").value;
+            
+            console.log(nome_coletor);
+            console.log(cnpj_coletor);
+            console.log(email_coletor);
+            console.log(telefone_coletor);
+            console.log(logradouro_coletor);
+            console.log(numero_coletor);
+            console.log(bairro_coletor);
+            console.log(cidade_coletor);
+            console.log(estado_coletor);
+            console.log(senha_coletor);
+            console.log(confirmar_coletor);
+        
+            let coletores = new Array();
+        
+            if(localStorage.hasOwnProperty("coletores")){
+                coletores = JSON.parse(localStorage.getItem("coletores"));
+            }
+        
+            coletores.push({nome_coletor, cnpj_coletor, email_coletor, telefone_coletor, logradouro_coletor, numero_coletor, bairro_coletor, cidade_coletor, estado_coletor, senha_coletor, confirmar_coletor});
+        
+            localStorage.setItem("coletores", JSON.stringify(coletores));
+        });
+
+        function abrirPerfil(){
+            window.location.href="../perfis/coletor.html";
+        }
+
+    </script>
     
     
 </body>
