@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const opcaoDescartar = document.getElementById('descartar');
-    const opcaoDivulgar = document.getElementById('divulgar');
+    const opcaoDescartar = document.getElementById('opcaoDescartar');
+    const opcaoDivulgar = document.getElementById('opcaoDivulgar');
 
     opcaoDescartar.addEventListener('change', function() {
         if (opcaoDescartar.checked) {
@@ -55,7 +55,7 @@ function fecharPopup() {
 document.getElementById('btnFecharPopup').addEventListener('click', fecharPopup);
 
 // Adiciona evento de clique ao botão Salvar
-document.querySelector('.botoes button[type="submit"]').addEventListener('click', function() {
+document.getElementById('btnSalvar').addEventListener('click', function() {
     const usuario = {
         nome: document.getElementById('nome').value,
         cpf: document.getElementById('cpf').value,
@@ -70,6 +70,6 @@ document.querySelector('.botoes button[type="submit"]').addEventListener('click'
 });
 
 // Adiciona evento de clique ao botão Cancelar
-document.querySelector('.botoes button[type="button"]').addEventListener('click', function() {
+document.getElementById('btnCancelar').addEventListener('click', function() {
     mostrarPopup("Criação de conta cancelada.");
 });

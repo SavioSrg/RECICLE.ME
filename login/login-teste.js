@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if(emailInformado === usuario.email && senhaInformada === usuario.senha) {
                 // Se o email e a senha estiverem corretos, redireciona para a página inicial do usuário
-                window.location.href = 'home/home.html';
+                window.location.href = '../perfis/usuario.html';
             } else {
                 // Se o email ou a senha estiverem incorretos, exibe uma mensagem de erro
                 mostrarMensagemErro("Email ou senha incorretos. Por favor, tente novamente.");

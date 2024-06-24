@@ -88,5 +88,78 @@
     <div id="fundo-modal" class="hidden" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()"></div>
 
     <script src="../perfis/usuario.js"></script>
+    <script>
+        function carregarDados() {
+    const cliente = JSON.parse(localStorage.getItem('cliente'));
+
+    if (cliente) {
+        document.getElementById("nome").value = cliente.nome || "";
+        document.getElementById("cpf").value = cliente.cpf || "";
+        document.getElementById("email").value = cliente.email || "";
+        document.getElementById("telefone").value = cliente.telefone || "";
+        document.getElementById("cidade").value = cliente.cidade || "";
+    }
+}
+
+function habilitaEdicao() {
+    const editarButton = document.getElementById('editar');
+
+    if (editarButton.innerText === "Editar") {
+        document.getElementById('nome').disabled = false;
+        document.getElementById('cpf').disabled = false;
+        document.getElementById('email').disabled = false;
+        document.getElementById('telefone').disabled = false;
+        document.getElementById('cidade').disabled = false;
+
+        editarButton.innerText = "Salvar";
+
+        document.getElementById('nome').classList.add("modoEdicao");
+        document.getElementById('cpf').classList.add("modoEdicao");
+        document.getElementById('email').classList.add("modoEdicao");
+        document.getElementById('telefone').classList.add("modoEdicao");
+        document.getElementById('cidade').classList.add("modoEdicao");
+
+        editarButton.addEventListener('click', salvarDados);
+    } else {
+        salvarDados();
+        document.getElementById('nome').disabled = true;
+        document.getElementById('cpf').disabled = true;
+        document.getElementById('email').disabled = true;
+        document.getElementById('telefone').disabled = true;
+        document.getElementById('cidade').disabled = true;
+
+        editarButton.innerText = "Editar";
+
+        document.getElementById('nome').classList.remove("modoEdicao");
+        document.getElementById('cpf').classList.remove("modoEdicao");
+        document.getElementById('email').classList.remove("modoEdicao");
+        document.getElementById('telefone').classList.remove("modoEdicao");
+        document.getElementById('cidade').classList.remove("modoEdicao");
+    }
+}
+
+function exclusaoDados() {
+    localStorage.removeItem("cliente");
+    location.reload();
+}
+
+function salvarDados() {
+    var nome = document.getElementById("nome").value;
+    var cpf = document.getElementById("cpf").value;
+    var email = document.getElementById("email").value;
+    var telefone = document.getElementById("telefone").value;
+    var cidade = document.getElementById("cidade").value;
+
+    localStorage.setItem("cliente", JSON.stringify({
+        nome: nome,
+        cpf: cpf,
+        email: email,
+        telefone: telefone,
+        cidade: cidade
+    }));
+}
+
+    </script>
+    
 </body>
 </html>
