@@ -100,5 +100,51 @@
         <img class="rodape-img" src="../logos/logo-200px.png" alt="LogoRecicleME">
     </footer>
     <script src="nova-conta-cliente.js"></script>
+
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const opcaoDescartar = document.getElementById('opcaoDescartar');
+        const opcaoDivulgar = document.getElementById('opcaoDivulgar');
+    
+        // Define a opção "Quero descartar meu lixo" como marcada por padrão ao carregar a página
+        opcaoDescartar.checked = true;
+    
+        opcaoDescartar.addEventListener('change', function() {
+            if (opcaoDescartar.checked) {
+                window.location.href = '../nova_conta_cliente/nova-conta-cliente.html';
+            }
+        });
+    
+        opcaoDivulgar.addEventListener('change', function() {
+            if (opcaoDivulgar.checked) {
+                window.location.href = '../nova_conta_coletor/nova-conta-coletor.html';
+            }
+        });
+    
+        // Verifica se há um estado salvo para os botões de rádio
+        if(localStorage.getItem('opcaoSelecionada')) {
+            const opcaoSelecionada = localStorage.getItem('opcaoSelecionada');
+            document.getElementById(opcaoSelecionada).checked = true;
+        }
+    
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                localStorage.setItem('opcaoSelecionada', this.id);
+            });
+        });
+    
+        const inputsObrigatorios = document.querySelectorAll('input[required]');
+        const mensagemObrigatorio = document.querySelector('.mensagem-obrigatorio');
+    
+        inputsObrigatorios.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    mensagemObrigatorio.style.display = 'block';
+                } else {
+                    mensagemObrigatorio.style.display = 'none';
+                }
+            });
+        });
+    });</script>
+    
 </body>
 </html>
