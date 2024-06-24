@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login-teste.css">
     <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <script src="login.js"></script>
     <title>Início</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -34,7 +35,7 @@
 
     <main>
 
-        <div class="container-pai">
+        <div id="loginForm" class="container-pai">
             
             <div class="container-descarte-certo">
 
@@ -45,15 +46,14 @@
             </div>
 
             <div class="container-login">
-                <input type="text" class="email" placeholder="Email" required>
-                <input type="password" class="senha" placeholder="Senha" required>
+                <input type="text" id="loginEmail" class="email" placeholder="Email" required>
+                <input type="password" id="loginSenha" class="senha" placeholder="Senha" required>
                 <div class="mensagem">
                     <img src="../imgs/imagem-atencao.png" alt="img-atencao" class="img-atencao">
                     <span class="mensagem-erro">Revise os campos preenchidos</span>
-                    
                 </div>
                 
-                <button class="botao-login">Login</button>
+                <button type="submit" id="btnLogin" class="botao-login">Login</button>
                 <span class="esqueci-senha">Esqueci a senha</span>
                 <a href='../nova_conta_coletor/nova-conta-coletor.html' class="nao-possuo-conta">Não possuo conta</a>
             </div>
