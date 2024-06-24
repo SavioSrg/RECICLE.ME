@@ -65,8 +65,11 @@ document.getElementById('btnSalvar').addEventListener('click', function() {
         senha: document.getElementById('senha').value
     };
 
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    localStorage.setItem('cliente', JSON.stringify(usuario));
     mostrarPopup("Conta criada com sucesso!");
+    
+    // Redireciona para a tela de perfil após salvar
+    window.location.href = '../perfis/usuario.html';
 });
 
 // Adiciona evento de clique ao botão Cancelar

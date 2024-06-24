@@ -25,9 +25,9 @@ function preencherFormulario() {
         document.getElementById('email').value = usuarioLogado.email;
         document.getElementById('telefone').value = usuarioLogado.telefone;
         document.getElementById("cidade").value = usuarioLogado.cidade;
-    } else {
+    } /*else {
         alert('Usuário não encontrado.');
-    }
+    }*/
 }
 
 // Salvar as alterações no perfil

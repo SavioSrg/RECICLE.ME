@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/padrao/style.css"> -->
     <link rel="stylesheet" href="../perfis/style-perfis.css">
     <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
     <title>Perfil</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
-
 </head>
 <body>
     <header class="cabecalho">
@@ -22,7 +20,6 @@
             <a href="../perfis/usuario.html" class="como-descartar" style="color: #414B3B;">Perfil</a>
             <a href="../login/login-teste.html" class="login">Sair</a>
         </nav>
-
     </header>
 
     <main>
@@ -44,15 +41,15 @@
                 <div id="card-infos">
                     <div id="formulario">
                         <label for="nome">Nome:<span>*</span></label>
-                        <input type="text" name="Nome" id="nome" placeholder="Nome completo" style="width: 90%;">
+                        <input type="text" name="Nome" id="nome" placeholder="Nome completo" style="width: 90%;" disabled>
                         <label for="cpf">CPF:<span>*</span></label>
-                        <input type="number" name="CPF" id="cpf" placeholder="CPF" style="width: 90%;">
+                        <input type="text" name="CPF" id="cpf" placeholder="CPF" style="width: 90%;" disabled>
                         <label for="email">E-mail:<span>*</span></label>
-                        <input type="email" name="E-mail" id="email" placeholder="E-mail" style="width: 90%;">
+                        <input type="email" name="E-mail" id="email" placeholder="E-mail" style="width: 90%;" disabled>
                         <label for="telefone">Telefone:<span>*</span></label>
-                        <input type="text" name="Telefone" id="telefone" placeholder="Telefone" style="width: 90%;">
+                        <input type="text" name="Telefone" id="telefone" placeholder="Telefone" style="width: 90%;" disabled>
                         <label for="cidade">Cidade:<span>*</span></label>
-                        <input type="text" name="Cidade" id="cidade" placeholder="Cidade" style="width: 90%;">
+                        <input type="text" name="Cidade" id="cidade" placeholder="Cidade" style="width: 90%;" disabled>
                     
                         <p><span>*</span> Campos de preenchimento obrigatório.</p>
                     </div>
@@ -69,27 +66,34 @@
                     <div id="confirmacao" class="hidden">
                         <p>Confirma a exclusão da conta? Todos os dados serão perdidos.</p>
                         <div>
-                            <button type="button" id="editar" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
-                            <button type="button" id="excluir">Excluir</button>
+                            <button type="button" id="cancelar-exclusao" onClick="fecharConfirmacao()">Cancelar</button>
+                            <button type="button" id="confirmar-exclusao">Excluir</button>
                         </div>
                     </div>
                 </div>
                 
             </div>
         </section>
-
     </main>
     
     <footer class="rodape">
         <p class="rodape-texto">Recicle.me</p>
-        <img class="rodape-img"  src="../logos/logosvg.svg" alt="LogoRecicleME">
+        <img class="rodape-img" src="../logos/logosvg.svg" alt="LogoRecicleME">
     </footer>
 
-    <div id="fundo-modal" class="hidden" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()"></div>
+    <div id="fundo-modal" class="hidden" onClick="fecharConfirmacao()"></div>
 
-    <script src="../perfis/usuario.js"></script>
+    <script src="usuario.js"></script>
+
     <script>
-        function carregarDados() {
+        document.addEventListener("DOMContentLoaded", function() {
+    carregarDados();
+    
+    document.getElementById('editar').addEventListener('click', habilitaEdicao);
+    document.getElementById('confirmar-exclusao').addEventListener('click', exclusaoDados);
+});
+
+function carregarDados() {
     const cliente = JSON.parse(localStorage.getItem('cliente'));
 
     if (cliente) {
@@ -119,6 +123,7 @@ function habilitaEdicao() {
         document.getElementById('telefone').classList.add("modoEdicao");
         document.getElementById('cidade').classList.add("modoEdicao");
 
+        // Adiciona o evento de clique para salvar os dados
         editarButton.addEventListener('click', salvarDados);
     } else {
         salvarDados();
@@ -140,7 +145,8 @@ function habilitaEdicao() {
 
 function exclusaoDados() {
     localStorage.removeItem("cliente");
-    location.reload();
+    alert("Conta excluída com sucesso!");
+    window.location.href = '../login/login-teste.html';
 }
 
 function salvarDados() {
@@ -157,9 +163,39 @@ function salvarDados() {
         telefone: telefone,
         cidade: cidade
     }));
+
+    // Desabilitar os campos após salvar
+    /*document.getElementById('nome').disabled = true;
+    document.getElementById('cpf').disabled = true;
+    document.getElementById('email').disabled = true;
+    document.getElementById('telefone').disabled = true;
+    document.getElementById('cidade').disabled = true;*/
+
+    // Alterar o texto do botão de volta para "Editar"
+    /*document.getElementById('editar').innerText = "Editar";
+
+    // Remover a classe de modo edição
+    document.getElementById('nome').classList.remove("modoEdicao");
+    document.getElementById('cpf').classList.remove("modoEdicao");
+    document.getElementById('email').classList.remove("modoEdicao");
+    document.getElementById('telefone').classList.remove("modoEdicao");
+    document.getElementById('cidade').classList.remove("modoEdicao");*/
+}
+
+function abreConfirmacao() {
+    document.getElementById('fundo-modal').classList.remove('hidden');
+    document.getElementById('confirmacao').classList.remove('hidden');
+}
+
+function fecharConfirmacao() {
+    document.getElementById('fundo-modal').classList.add('hidden');
+    document.getElementById('confirmacao').classList.add('hidden');
 }
 
     </script>
-    
+
+
 </body>
 </html>
+
+    
