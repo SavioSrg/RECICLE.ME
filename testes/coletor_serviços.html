@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../meus_servicos/styles/style-servicos-coletor.css">
+    <link rel="shortcut icon" href="../logos/favicon.png" type="image/x-icon">
+    <title>Meus Serviços</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a href="../home/home.html" class="inicio">Início</a>
+            <a href="../material/materiais.html" class="como-descartar">Como <br />Descartar</a>
+            <a href="../meus_servicos/coletor.html" class="como-descartar" style="color: #414B3B;">Meus Serviços</a>
+            <a href="../minhas_coletas/coletor.html" class="como-descartar">Minhas Coletas</a>
+            <a href="../perfis/coletor.html" class="como-descartar">Perfil</a>
+            <a href="../login/login-teste.html" class="login">Sair</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="perfil">
+            <h1>Meus <br>Serviços</h1>
+        </div>
+        <section class="cadastro">
+            <form id="card-servico">
+                <h3>Cadastre seu serviço</h3>
+                <div class="campos-forms">
+                    <label for="horarioAtendimento">Dia e Horário<span>*</span></label>
+                    <input type="text" name="horario" id="horarioAtendimento" placeholder="Exemplo: Seg-Sex: 7:00 às 11:00" required>
+                </div>
+                <div class="campos-forms">
+                    <label for="categoria">Categoria de material<span>*</span></label>
+                    <select name="categoria" id="categoria" required>
+                        <option value="">Selecione...</option>
+                        <option value="Plástico">Plástico</option>
+                        <option value="Vidro">Vidro</option>
+                        <option value="Papel">Papel</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Orgânico">Orgânico</option>
+                    </select>
+                </div>
+                <div class="campos-forms">
+                    <label>Tipo de entrega<span>*</span></label>
+                    <div id="escolher-entrega">
+                        <input type="checkbox" name="entrega" id="recolher">
+                        <label for="entrega" style="width: 31%;">Recolher em domicílio</label>
+
+                        <input type="checkbox" name="entrega" id="receber">
+                        <label for="entrega" style="width: 27%;">Receber no local</label>
+
+                        <div class="info">
+                            <div class="button">
+                                <span id="button-info">?</span>
+                            </div>
+                            <div class="info-texto">
+                                <span>Marque <b class="texto">"Recolher em domicílio"</b> caso você aceite ir até a residência do cliente para recolher o material a ser coletado.
+                                    <br><br>
+                                    Marque <b class="texto">"Receber no local"</b> se você permite que o cliente vá até o seu encontro para
+                                    entregar o material a ser coletado.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="campos-forms">
+                    <label for="descricao">Descrição<span>*</span></label>
+                    <textarea name="descricao" id="descricao" required placeholder="Digite aqui os materiais que se incluem neste serviço, além de outras informações que achar pertinente."></textarea>
+                </div>
+                <div>
+                    <p><span>*</span> Campos de preenchimento obrigatório.</p>
+                </div>
+                <div id="button-servico">
+                    <button type="submit">Cadastrar serviço</button>
+                </div>
+            </form>
+        </section>
+        <section class="listagem">
+            <div id="card-confirmacao">
+                <div></div>
+                <div id="confirmacao" class="hidden">
+                    <p>Confirma a exclusão deste serviço? Os dados dele serão perdidos.</p>
+                    <div>
+                        <button type="button" id="editar" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">Cancelar</button>
+                        <button type="button" id="excluir" class="excluir" onclick="excluirServico()">Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-listagem">
+                <div class="servico hidden" id="servico0">
+                    <span id="categoria_card0"></span>
+                    <input type="text" name="horario" id="dia_horario_card0" placeholder="Horário de coletagem" disabled>
+                    <textarea name="descricao" id="descricao_card0" placeholder="Descrição do serviço" disabled></textarea>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="entrega" id="recolher_card0" disabled>
+                            <label for="entrega" style="width: 31%;">Recolher em domicílio</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="entrega" id="receber_card0" disabled>
+                            <label for="entrega" style="width: 27%;">Receber no local</label>
+                        </div>
+                    </div>
+                    <div class="botoes">
+                        <button type="button" class="editar0" onclick="habilitaEdicao(0)">Editar</button>
+                        <button type="button" class="excluir" onclick="abreConfirmacao(0)">Excluir</button>
+                    </div>
+                </div>
+                <!-- Replicar o bloco acima para outros serviços conforme necessário -->
+            </div>
+        </section>
+    </main>
+
+    <div id="fundo-modal" class="hidden" onClick="(() => {document.getElementById('fundo-modal').classList.add('hidden'); document.getElementById('confirmacao').classList.add('hidden')})()">
+    </div>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Recicle.me</p>
+        <img class="rodape-img" src="../logos/logosvg.svg" alt="LogoRecicleME">
+    </footer>
+
+    <script>
+        var cardForm = document.getElementById("card-servico");
+        const servicosArray = JSON.parse(localStorage.getItem('servicos')) || [];
+
+        cardForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            var categoria = document.getElementById("categoria").value;
+            var horario_atendimento = document.getElementById("horarioAtendimento").value;
+            var escolher_recolher = document.getElementById("recolher").checked;
+            var escolher_receber = document.getElementById("receber").checked;
+            var descricao = document.getElementById("descricao").value;
+
+            if (horario_atendimento && descricao && (escolher_receber || escolher_recolher) && (categoria != "")) {
+                servicosArray.push({ categoria, horario_atendimento, escolher_recolher, escolher_receber, descricao });
+                localStorage.setItem("servicos", JSON.stringify(servicosArray));
+                alert("Sucesso! Serviço cadastrado.");
+                window.location.reload();
+            } else {
+                alert("Ops! Necessário preencher todos os campos obrigatórios para prosseguir.")
+            }
+        });
+
+        function renderizaServicos() {
+            for (let i = 0; i < servicosArray.length; i++) {
+                const cardServicoAtual = document.getElementById(`servico${i}`);
+                cardServicoAtual.classList.remove("hidden");
+                document.getElementById(`categoria_card${i}`).innerText = servicosArray[i].categoria;
+                document.getElementById(`dia_horario_card${i}`).value = servicosArray[i].horario_atendimento;
+                document.getElementById(`descricao_card${i}`).innerText = servicosArray[i].descricao;
+                document.getElementById(`recolher_card${i}`).checked = servicosArray[i].escolher_recolher;
+                document.getElementById(`receber_card${i}`).checked = servicosArray[i].escolher_receber;
+            }
+        }
+
+        renderizaServicos();
+
+        function abreConfirmacao(i) {
+            window.i = i;
+            document.getElementById("fundo-modal").classList.remove("hidden");
+            document.getElementById("confirmacao").classList.remove("hidden");
+        }
+
+        function excluirServico() {
+            const servicoIndex = window.i;
+            servicosArray.splice(servicoIndex, 1);
+            localStorage.setItem('servicos', JSON.stringify(servicosArray));
+            alert("Serviço excluído com sucesso.");
+            window.location.reload();
+        }
+
+        function habilitaEdicao(i) {
+            const categoriaCard = document.getElementById(`categoria_card${i}`);
+            const horarioCard = document.getElementById(`dia_horario_card${i}`);
+            const descricaoCard = document.getElementById(`descricao_card${i}`);
+            const recolherCard = document.getElementById(`recolher_card${i}`);
+            const receberCard = document.getElementById(`receber_card${i}`);
+            
+            horarioCard.disabled = !horarioCard.disabled;
+            descricaoCard.disabled = !descricaoCard.disabled;
+            recolherCard.disabled = !recolherCard.disabled;
+            receberCard.disabled = !receberCard.disabled;
+            
+            if (!horarioCard.disabled) {
+                horarioCard.focus();
+            } else {
+                salvarDados(i, categoriaCard.innerText, horarioCard.value, descricaoCard.value, recolherCard.checked, receberCard.checked);
+            }
+        }
+
+        function salvarDados(i, categoria, horario, descricao, recolher, receber) {
+            servicosArray[i] = {
+                categoria: categoria,
+                horario_atendimento: horario,
+                descricao: descricao,
+                escolher_recolher: recolher,
+                escolher_receber: receber
+            };
+            localStorage.setItem('servicos', JSON.stringify(servicosArray));
+            alert("Serviço atualizado com sucesso.");
+        }
+    </script>
+</body>
+</html>

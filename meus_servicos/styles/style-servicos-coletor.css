@@ -194,7 +194,7 @@ button {
     display: flex;
 }
 
-button.editar {
+button#editar, button.editar0, button.editar1, button.editar2, button.editar3, button.editar4, button.editar5 {
     background-color: #52724A;
     padding: 0 0.5rem;
 }
@@ -204,7 +204,7 @@ button.excluir {
     padding: 0 0.5rem;
 }
 
-.servico input#categoria, .servico input#categoria::placeholder {
+span#categoria_card0, span#categoria_card1, span#categoria_card2, span#categoria_card3, span#categoria_card4, span#categoria_card5 {
     background-color: transparent;
     color: #D9D9D9;
 
@@ -268,6 +268,53 @@ div#escolher-entrega {
 
 .texto {
     color: #6d8f64;
+}
+
+.hidden {
+    display: none;
+}
+
+.modoEdicao {
+    background-color: #ffffff !important;
+    color: #0c0c0c !important;
+}
+
+#card-confirmacao {
+    margin: auto;
+    width: 30%;
+}
+
+#confirmacao0, #confirmacao1, #confirmacao2, #confirmacao3, #confirmacao4, #confirmacao5 {
+    width: 25%;
+    background: #c0c0c0;
+    color: rgb(248, 0, 0, .8);
+    border-radius: 10px;
+    padding: 1.3rem;
+    position: fixed;
+    top: 44%;
+    z-index: 2;
+    font-weight: 600;
+    margin: auto;
+}
+
+#confirmacao0 > div, #confirmacao1 > div, #confirmacao2 > div, #confirmacao3 > div, #confirmacao4 > div, #confirmacao5 > div {
+    padding-top: .7rem;
+    margin-inline: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#fundo-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
 }
 
 /* Rodapé */

@@ -61,11 +61,11 @@ document.getElementById('btnFecharPopup').addEventListener('click', fecharPopup)
 
 // Adiciona evento de clique ao botão Salvar
 document.querySelector('.botoes button[type="submit"]').addEventListener('click', function() {
-    mostrarPopup("Conta criada com sucesso!");
-});
+  mostrarPopup("Conta criada com sucesso!");
+ });
 
 // Adiciona evento de clique ao botão Cancelar
 document.querySelector('.botoes button[type="button"]').addEventListener('click', function() {
     mostrarPopup("Criação de conta cancelada.");
-}); 
+});
  

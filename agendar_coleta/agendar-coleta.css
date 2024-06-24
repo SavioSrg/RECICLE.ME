@@ -74,7 +74,7 @@
     justify-content: end;
     padding-left: 10px;
     position: relative;
-    left: 130px;
+    left: 135px;
     font-size: 14px;
     color: #FFFFFF;
     font-family: "Playfair Display", serif;
@@ -147,6 +147,25 @@ label {
     bottom: px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+}
+
+#nome::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1)
+}
+
+#nome {
+    background-color: #C0C0C0;
+}
+
+#coletor {
+    background-color: #C0C0C0;
+}
+
+#coletor::placeholder {
+    text-align: center;
+    color: rgba(17, 15, 15, 1);
+
 }
 
 input[type="text"] {
