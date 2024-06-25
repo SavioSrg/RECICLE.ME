@@ -13,7 +13,7 @@
     --cor3: #02935E;
     --cor4: #03035E;
     --cor5: #03135E;
-    --cor6: #D9D9D9;
+    --cor6: #fafafa;;
     
     --fonte-padrão: arial;
     --fonte-destaque: arial;
@@ -26,6 +26,7 @@
     padding: 0px;
 }
 
+body
 /* barra de menu */
 .cabecalho{
     display: flex;
@@ -114,7 +115,7 @@
     left: calc(50% - 258.5px); /* Metade da largura do elemento */
     width: 517px;
     height: 515px;
-    background-color: rgba(65, 75, 59, 0.6);
+    background-color: #C0C0C0;
     padding: 20px;
     border-radius: 10px;
 }
@@ -155,11 +156,11 @@ label {
 }
 
 #nome {
-    background-color: #C0C0C0;
+    background-color: var(--cor6);
 }
 
 #coletor {
-    background-color: #C0C0C0;
+    background-color: var(--cor6);
 }
 
 #coletor::placeholder {

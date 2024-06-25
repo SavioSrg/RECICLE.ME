@@ -7,7 +7,7 @@
     --cor3: #02935E;
     --cor4: #03035E;
     --cor5: #03135E;
-    --cor6: rgba(217, 217, 217, 1);
+    --cor6: #fafafa;
     
     --fonte-padrão: arial;
     --fonte-destaque: arial;
@@ -166,6 +166,7 @@
     text-align: center;
     padding-top: 20px;
     font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hora-conteudo {
