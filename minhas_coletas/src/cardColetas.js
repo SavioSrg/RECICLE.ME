@@ -124,6 +124,7 @@ class CardColetas extends HTMLElement {
             text-align: center;
             padding: 1rem 0 0 0;
             margin: 0 auto 3rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
         
         .tempo, .informacoes  {

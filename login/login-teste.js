@@ -1,3 +1,6 @@
+const imgInterrogacao = document.querySelector(".img-atencao");
+
+
 document.addEventListener("DOMContentLoaded", function() {
     // Adiciona um evento de clique ao botão de login
     document.getElementById('button').addEventListener('click', function() {
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = '../home/home-coletor.html';
             } else {
                 // Se o email ou a senha estiverem incorretos, exibe uma mensagem de erro
-                mostrarMensagemErro("Email ou senha incorretos. Por favor, tente novamente.");
+                mostrarMensagemErro(" Email ou senha incorretos. Por favor, tente novamente.");
             }
 
         } else {
@@ -44,4 +47,5 @@ function mostrarMensagemErro(mensagem) {
     const mensagemErro = document.querySelector('.mensagem-erro');
     mensagemErro.innerText = mensagem;
     mensagemErro.style.display = 'block';
+    imgInterrogacao.style.display = 'block';
 }
