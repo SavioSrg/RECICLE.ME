@@ -134,7 +134,7 @@
 .conteudo-coleta1 {
     width: 154px;
     height: 423px;
-    background-color: rgba(152, 57, 57, 1);
+    background-color: rgba(178, 175, 88, 1);
     border-radius: 10px;
     margin-left: 10%;
     display: flex;
@@ -149,7 +149,6 @@
     text-align: center;
     padding-top: 20px;
     font-family: 'Inter', sans-serif;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .hora-conteudo {

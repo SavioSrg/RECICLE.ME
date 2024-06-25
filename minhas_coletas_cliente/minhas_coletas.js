@@ -15,9 +15,9 @@ $(document).ready(function () {
                     <p class="produto">${coletaData.produto}</p>
                     <p class="numeracao">${coletaData.coletaNumero}</p>
                     <p class="validacao">Coleta agendada</p>
-                    <p class="material">Plástico</p>
+                    <p class="material">Metal</p>
                     <div class="imagem-coleta">
-                    <img src="../imgs/plastico (1).png" alt="vidro"
+                    <img src="../imgs/metais (1).png" alt="vidro"
                     </div>
                 </div>
             </div>
