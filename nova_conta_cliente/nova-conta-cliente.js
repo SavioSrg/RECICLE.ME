@@ -65,14 +65,15 @@ document.getElementById('btnSalvar').addEventListener('click', function() {
         senha: document.getElementById('senha').value
     };
 
-    localStorage.setItem('cliente', JSON.stringify(usuario));
+    localStorage.setItem('usuario', JSON.stringify(usuario));
     mostrarPopup("Conta criada com sucesso!");
-    
-    // Redireciona para a tela de perfil após salvar
-    window.location.href = '../perfis/usuario.html';
 });
 
 // Adiciona evento de clique ao botão Cancelar
 document.getElementById('btnCancelar').addEventListener('click', function() {
     mostrarPopup("Criação de conta cancelada.");
 });
+
+function abrirPerfil(){
+    window.location.href="../login/login-teste.html";
+}
