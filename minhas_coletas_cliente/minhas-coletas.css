@@ -130,34 +130,17 @@
     padding-left: 10px;
 }
 
-.card-coleta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly
-
-}
 
 .conteudo-coleta1 {
     width: 154px;
     height: 423px;
-    background-color: rgba(206, 146, 90, 1);
+    background-color: rgba(152, 57, 57, 1);
     border-radius: 10px;
     margin-left: 10%;
-}
-
-.conteudo-coleta2 {
-    background-color: rgba(98, 153, 107, 1);
-    width: 154px;
-    height: 423px;
-    border-radius: 10px;
-}
-
-.conteudo-coleta3 {
-    background-color: rgba(88, 105, 150, 1);
-    width: 154px;
-    height: 423px;
-    border-radius: 10px;
-    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 35.5%;
 }
 
 .conteudo-caixa {
@@ -213,4 +196,3 @@
     height: 110px;
     padding-top: 5%;
 }
-

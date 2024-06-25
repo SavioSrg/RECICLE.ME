@@ -17,7 +17,7 @@ $(document).ready(function () {
                     <p class="validacao">Coleta agendada</p>
                     <p class="material">Plástico</p>
                     <div class="imagem-coleta">
-                    <img src="/imgs/vidros.png" alt="vidro"
+                    <img src="../imgs/plastico (1).png" alt="vidro"
                     </div>
                 </div>
             </div>

@@ -115,7 +115,7 @@ body
     left: calc(50% - 258.5px); /* Metade da largura do elemento */
     width: 517px;
     height: 515px;
-    background-color: #C0C0C0;
+    background-color: rgba(65, 75, 59, 0.6);
     padding: 20px;
     border-radius: 10px;
 }
@@ -156,11 +156,11 @@ label {
 }
 
 #nome {
-    background-color: var(--cor6);
+    background-color: rgba(202, 202, 202, 1);
 }
 
 #coletor {
-    background-color: var(--cor6);
+    background-color: rgba(202, 202, 202, 1);
 }
 
 #coletor::placeholder {
@@ -467,4 +467,5 @@ input[type="text"] {
     position:fixed;
     top:0;
     left:0;
-    }
+}
+
