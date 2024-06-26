@@ -129,7 +129,8 @@
                         <button type="button" id="alterar-senha">Alterar senha</button>
                     </div>
                     <div class="cadastrar-servico">
-                        <a href="../meus_servicos/coletor.html"><button type="button" id="cadastrar-servico">Cadastrar Serviço</button></a>
+                        <a href="../meus_servicos/coletor.html"><button type="button" id="cadastrar-servico">Cadastrar
+                                Serviço</button></a>
                     </div>
                     <div id="botoes-formulario">
                         <button onclick="habilitaEdicao()" type="button" id="editar">Editar</button>
@@ -163,7 +164,7 @@
     </div>
 
     <script src="../perfis/usuario.js"></script>
-    
+
     <script>
         function carregarDados() {
             const coletorArray = JSON.parse(localStorage.getItem('coletores'));
@@ -174,7 +175,7 @@
                 document.getElementById("cnpj").value = coletorArray[0].cnpj_coletor;
                 document.getElementById("email").value = coletorArray[0].email_coletor;
                 document.getElementById("telefone").value = coletorArray[0].telefone_coletor;
-                document.getElementById("rua").value = coletorArray[0].lougradouro_coletor;
+                document.getElementById("rua").value = coletorArray[0].logradouro_coletor;
                 document.getElementById("numero").value = coletorArray[0].numero_coletor;
                 document.getElementById("bairro").value = coletorArray[0].bairro_coletor;
                 document.getElementById("cidade").value = coletorArray[0].cidade_coletor;
@@ -242,7 +243,8 @@
 
         function exclusaoDados() {
             localStorage.removeItem("coletores");
-            location.reload();
+            alert("Conta excluída com sucesso!");
+            window.location.href = '../login/login-teste.html';
         }
 
         function salvarDados() {
@@ -258,13 +260,13 @@
             var estado_coletor = document.getElementById("estado").value;
 
             let coletores = new Array();
-        
-            if(localStorage.hasOwnProperty("coletores")){
+
+            if (localStorage.hasOwnProperty("coletores")) {
                 coletores = JSON.parse(localStorage.getItem("coletores"));
             }
-        
-            coletores.push({nome_coletor, cnpj_coletor, email_coletor, telefone_coletor, logradouro_coletor, numero_coletor, bairro_coletor, cidade_coletor, estado_coletor});
-        
+
+            coletores.push({ nome_coletor, cnpj_coletor, email_coletor, telefone_coletor, logradouro_coletor, numero_coletor, bairro_coletor, cidade_coletor, estado_coletor });
+
             localStorage.setItem("coletores", JSON.stringify(coletores));
         }
     </script>
