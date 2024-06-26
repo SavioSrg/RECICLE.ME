@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     // Redirect to "minhas coletas" page
     window.location.href =
-      "http://127.0.0.1:5501/minhas_coletas_cliente/minhas-coletas.html";
+      "../minhas_coletas_cliente/minhas-coletas.html";
   });
 
   // Optional: If you want to handle Cancel button click
