@@ -94,7 +94,7 @@
 });
 
 function carregarDados() {
-    const cliente = JSON.parse(localStorage.getItem('cliente'));
+    const cliente = JSON.parse(localStorage.getItem('usuario'));
 
     if (cliente) {
         document.getElementById("nome").value = cliente.nome || "";
