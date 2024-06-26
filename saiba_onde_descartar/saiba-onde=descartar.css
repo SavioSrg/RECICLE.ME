@@ -103,7 +103,7 @@ h3, h2{
 
 .conteudo1{
     font-size: 14px;
-    color: #49534ba1;
+    /* color: #49534ba1; */
     font-weight: 300;
     font-family: "inter", serif;
 }
@@ -117,7 +117,7 @@ h3, h2{
 }
 .lista-oferecemos{
     font-size: 14px;
-    color: #49534ba1;
+    /* color: #49534ba1; */
     font-weight: 300;
     font-family: "inter", serif;
 
@@ -126,7 +126,7 @@ h3, h2{
 .conteudo3{
     padding-top: 1rem;
     font-size: 14px;
-    color: #49534ba1;
+    /* color: #49534ba1; */
     font-weight: 300;
     font-family: "inter", serif;
 }
@@ -176,7 +176,7 @@ align-self: flex-end;
 
 .content {
     font-size: 14px;
-    color: #49534ba1;
+    /* color: #49534ba1; */
     font-weight: 300;
     font-family: "inter", serif;
     padding: 0 18px;

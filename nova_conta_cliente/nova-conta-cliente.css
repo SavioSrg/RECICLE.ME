@@ -47,6 +47,7 @@ body{
     font-weight: 600;
     font-family: "Playfair Display", serif;
     padding-left: 5px;
+    text-decoration: none
 }
 
 .como-descartar{
@@ -55,7 +56,7 @@ body{
      color: #FFFFFF;
      font-weight: 600;
      font-family: "Playfair Display", serif;
-
+     text-decoration: none
 }
 
 .login{

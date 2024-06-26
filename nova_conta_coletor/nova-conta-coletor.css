@@ -44,6 +44,7 @@ body{
     color: #FFFFFF;
     font-weight: 600;
     font-family: "Playfair Display", serif;
+    text-decoration: none
 }
 
 .login {

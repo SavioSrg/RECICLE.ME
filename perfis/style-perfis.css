@@ -185,12 +185,12 @@ button {
     cursor: pointer;
 }
 
-button#editar {
+button#editar, button.editar {
     background: var(--cor6);
     border: 1px solid var(--cor6);
 }
 
-button#excluir {
+button#excluir, button.excluir {
     background: #983939;
     border: 1px solid #983939;
     margin-left: 1rem;

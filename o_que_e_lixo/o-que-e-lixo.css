@@ -87,10 +87,10 @@
     border:none;
     background-color: transparent;
     opacity: 80%;
-    width: 437px;
-    height: 426px;
+    width: 484px;
+    height: 444px;
     margin-top: 10px;
-    margin-bottom: 585px;
+    margin-bottom: 619px;
 }
 
 .titulo-mudanca{
@@ -119,6 +119,8 @@
     width: 437px;
     height: 510px;
     margin-top: 393px;
+    padding-inline: 1.5rem;
+    padding-top: 1rem;
     margin-bottom: 27px;
     padding-bottom: 10px;
     background-color: #49534b93;

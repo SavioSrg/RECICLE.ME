@@ -86,10 +86,10 @@
     position:relative;
     border:none;
     background-color: transparent;
-    width: 437px;
-    height: 426px;
+    width: 470px;
+    height: 429px;
     margin-top: 10px;
-    margin-bottom: 585px;
+    margin-bottom: 638px;
 }
 
 .titulo-mudanca{
@@ -120,6 +120,8 @@
     margin-top: 776px;
     margin-bottom: 27px;
     padding-bottom: 4rem;
+    padding-inline: 1rem;
+    padding-top: 1rem;
     background-color: #49534b93;
 }
  .conteiner-mudanca p:first-letter {
