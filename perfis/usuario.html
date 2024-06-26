@@ -93,7 +93,7 @@
 });
 
 function carregarDados() {
-    const cliente = JSON.parse(localStorage.getItem('cliente'));
+    const cliente = JSON.parse(localStorage.getItem('usuario'));
 
     if (cliente) {
         document.getElementById("nome").value = cliente.nome || "";
@@ -143,7 +143,7 @@ function habilitaEdicao() {
 }
 
 function exclusaoDados() {
-    localStorage.removeItem("cliente");
+    localStorage.removeItem("usuario");
     alert("Conta excluída com sucesso!");
     window.location.href = '../login/login-teste.html';
 }
@@ -155,7 +155,7 @@ function salvarDados() {
     var telefone = document.getElementById("telefone").value;
     var cidade = document.getElementById("cidade").value;
 
-    localStorage.setItem("cliente", JSON.stringify({
+    localStorage.setItem("usuario", JSON.stringify({
         nome: nome,
         cpf: cpf,
         email: email,
